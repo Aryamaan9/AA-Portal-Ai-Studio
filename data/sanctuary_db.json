@@ -1,0 +1,3433 @@
+{
+  "entries": [
+    {
+      "id": "entry_1786898926130_ig0xv",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:48:46.130Z",
+      "updated_at": "2026-08-16T16:48:46.130Z"
+    },
+    {
+      "id": "entry_1786898926122_7kunt",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:48:46.122Z",
+      "updated_at": "2026-08-16T16:48:46.122Z"
+    },
+    {
+      "id": "entry_1786898926113_y67cl",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:48:46.113Z",
+      "updated_at": "2026-08-16T16:48:46.113Z"
+    },
+    {
+      "id": "entry_1786898926106_8iofu",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:48:46.106Z",
+      "updated_at": "2026-08-16T16:48:46.106Z"
+    },
+    {
+      "id": "entry_1786898926099_3bexx",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:48:46.099Z",
+      "updated_at": "2026-08-16T16:48:46.099Z"
+    },
+    {
+      "id": "entry_1786898926092_xdn8z",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:48:46.092Z",
+      "updated_at": "2026-08-16T16:48:46.092Z"
+    },
+    {
+      "id": "entry_1786898926085_3x4i5",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:48:46.085Z",
+      "updated_at": "2026-08-16T16:48:46.085Z"
+    },
+    {
+      "id": "entry_1786898926076_gwgg9",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:48:46.076Z",
+      "updated_at": "2026-08-16T16:48:46.076Z"
+    },
+    {
+      "id": "entry_1786898926067_7tn25",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:48:46.067Z",
+      "updated_at": "2026-08-16T16:48:46.067Z"
+    },
+    {
+      "id": "entry_1786898926061_4a5nm",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:48:46.061Z",
+      "updated_at": "2026-08-16T16:48:46.061Z"
+    },
+    {
+      "id": "entry_1786898925994_wds56",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:48:45.994Z",
+      "updated_at": "2026-08-16T16:48:45.994Z"
+    },
+    {
+      "id": "entry_1786898925986_r2rl8",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:48:45.986Z",
+      "updated_at": "2026-08-16T16:48:46.010Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786898307458_9y3k9",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:38:27.458Z",
+      "updated_at": "2026-08-16T16:38:27.458Z"
+    },
+    {
+      "id": "entry_1786898307451_orfgb",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:38:27.451Z",
+      "updated_at": "2026-08-16T16:38:27.451Z"
+    },
+    {
+      "id": "entry_1786898307443_zdpgz",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:38:27.443Z",
+      "updated_at": "2026-08-16T16:38:27.443Z"
+    },
+    {
+      "id": "entry_1786898307435_6zjdx",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:38:27.435Z",
+      "updated_at": "2026-08-16T16:38:27.435Z"
+    },
+    {
+      "id": "entry_1786898307426_667jl",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:38:27.426Z",
+      "updated_at": "2026-08-16T16:38:27.426Z"
+    },
+    {
+      "id": "entry_1786898307416_5fluf",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:38:27.416Z",
+      "updated_at": "2026-08-16T16:38:27.416Z"
+    },
+    {
+      "id": "entry_1786898307407_y8brk",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:38:27.407Z",
+      "updated_at": "2026-08-16T16:38:27.407Z"
+    },
+    {
+      "id": "entry_1786898307398_daqff",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:38:27.398Z",
+      "updated_at": "2026-08-16T16:38:27.398Z"
+    },
+    {
+      "id": "entry_1786898307389_wtu69",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:38:27.389Z",
+      "updated_at": "2026-08-16T16:38:27.389Z"
+    },
+    {
+      "id": "entry_1786898307383_ihhwd",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:38:27.383Z",
+      "updated_at": "2026-08-16T16:38:27.383Z"
+    },
+    {
+      "id": "entry_1786898307326_z579s",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:38:27.326Z",
+      "updated_at": "2026-08-16T16:38:27.326Z"
+    },
+    {
+      "id": "entry_1786898307318_jp02m",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:38:27.318Z",
+      "updated_at": "2026-08-16T16:38:27.337Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786898037174_hbbrp",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:57.174Z",
+      "updated_at": "2026-08-16T16:33:57.174Z"
+    },
+    {
+      "id": "entry_1786898037171_01cp7",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:57.171Z",
+      "updated_at": "2026-08-16T16:33:57.171Z"
+    },
+    {
+      "id": "entry_1786898037168_lb0jc",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:57.168Z",
+      "updated_at": "2026-08-16T16:33:57.168Z"
+    },
+    {
+      "id": "entry_1786898037165_p8ww0",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:57.164Z",
+      "updated_at": "2026-08-16T16:33:57.164Z"
+    },
+    {
+      "id": "entry_1786898037162_tflkn",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:57.162Z",
+      "updated_at": "2026-08-16T16:33:57.162Z"
+    },
+    {
+      "id": "entry_1786898037159_cdb6z",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:57.159Z",
+      "updated_at": "2026-08-16T16:33:57.159Z"
+    },
+    {
+      "id": "entry_1786898037156_h768c",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:57.156Z",
+      "updated_at": "2026-08-16T16:33:57.156Z"
+    },
+    {
+      "id": "entry_1786898037153_h0r13",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:57.153Z",
+      "updated_at": "2026-08-16T16:33:57.153Z"
+    },
+    {
+      "id": "entry_1786898037149_g7zjd",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:57.149Z",
+      "updated_at": "2026-08-16T16:33:57.149Z"
+    },
+    {
+      "id": "entry_1786898037147_3mo0o",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:57.147Z",
+      "updated_at": "2026-08-16T16:33:57.147Z"
+    },
+    {
+      "id": "entry_1786898037120_6zd7t",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:33:57.120Z",
+      "updated_at": "2026-08-16T16:33:57.120Z"
+    },
+    {
+      "id": "entry_1786898037117_6sitv",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:33:57.117Z",
+      "updated_at": "2026-08-16T16:33:57.126Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786898009064_wbsnp",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:29.064Z",
+      "updated_at": "2026-08-16T16:33:29.064Z"
+    },
+    {
+      "id": "entry_1786898009061_m8nea",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:29.061Z",
+      "updated_at": "2026-08-16T16:33:29.061Z"
+    },
+    {
+      "id": "entry_1786898009058_sy929",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:29.058Z",
+      "updated_at": "2026-08-16T16:33:29.058Z"
+    },
+    {
+      "id": "entry_1786898009054_kdexc",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:29.054Z",
+      "updated_at": "2026-08-16T16:33:29.054Z"
+    },
+    {
+      "id": "entry_1786898009051_kmjd7",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:29.051Z",
+      "updated_at": "2026-08-16T16:33:29.051Z"
+    },
+    {
+      "id": "entry_1786898009048_i3bxk",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:29.048Z",
+      "updated_at": "2026-08-16T16:33:29.048Z"
+    },
+    {
+      "id": "entry_1786898009044_1vmyl",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:29.044Z",
+      "updated_at": "2026-08-16T16:33:29.044Z"
+    },
+    {
+      "id": "entry_1786898009041_yk1o3",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:29.041Z",
+      "updated_at": "2026-08-16T16:33:29.041Z"
+    },
+    {
+      "id": "entry_1786898009038_bvgty",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:29.038Z",
+      "updated_at": "2026-08-16T16:33:29.038Z"
+    },
+    {
+      "id": "entry_1786898009035_vlbdy",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:33:29.035Z",
+      "updated_at": "2026-08-16T16:33:29.035Z"
+    },
+    {
+      "id": "entry_1786898009007_5jvhm",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:33:29.007Z",
+      "updated_at": "2026-08-16T16:33:29.007Z"
+    },
+    {
+      "id": "entry_1786898009004_cybgj",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:33:29.004Z",
+      "updated_at": "2026-08-16T16:33:29.015Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786897891736_337uf",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:31:31.736Z",
+      "updated_at": "2026-08-16T16:31:31.736Z"
+    },
+    {
+      "id": "entry_1786897891733_ecqda",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:31:31.733Z",
+      "updated_at": "2026-08-16T16:31:31.733Z"
+    },
+    {
+      "id": "entry_1786897891730_872bj",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:31:31.730Z",
+      "updated_at": "2026-08-16T16:31:31.730Z"
+    },
+    {
+      "id": "entry_1786897891727_igf7u",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:31:31.727Z",
+      "updated_at": "2026-08-16T16:31:31.727Z"
+    },
+    {
+      "id": "entry_1786897891724_k4hcy",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:31:31.724Z",
+      "updated_at": "2026-08-16T16:31:31.724Z"
+    },
+    {
+      "id": "entry_1786897891721_8z0mr",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:31:31.721Z",
+      "updated_at": "2026-08-16T16:31:31.721Z"
+    },
+    {
+      "id": "entry_1786897891717_fw1q5",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:31:31.717Z",
+      "updated_at": "2026-08-16T16:31:31.717Z"
+    },
+    {
+      "id": "entry_1786897891714_qzgm2",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:31:31.714Z",
+      "updated_at": "2026-08-16T16:31:31.714Z"
+    },
+    {
+      "id": "entry_1786897891711_4dbdy",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:31:31.711Z",
+      "updated_at": "2026-08-16T16:31:31.711Z"
+    },
+    {
+      "id": "entry_1786897891708_vxuba",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:31:31.708Z",
+      "updated_at": "2026-08-16T16:31:31.708Z"
+    },
+    {
+      "id": "entry_1786897891680_mlxl5",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:31:31.680Z",
+      "updated_at": "2026-08-16T16:31:31.680Z"
+    },
+    {
+      "id": "entry_1786897891677_qnk3s",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:31:31.677Z",
+      "updated_at": "2026-08-16T16:31:31.687Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786897851775_bssyo",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:51.775Z",
+      "updated_at": "2026-08-16T16:30:51.775Z"
+    },
+    {
+      "id": "entry_1786897851772_bl0bw",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:51.772Z",
+      "updated_at": "2026-08-16T16:30:51.772Z"
+    },
+    {
+      "id": "entry_1786897851769_plrw6",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:51.769Z",
+      "updated_at": "2026-08-16T16:30:51.769Z"
+    },
+    {
+      "id": "entry_1786897851766_67jct",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:51.766Z",
+      "updated_at": "2026-08-16T16:30:51.766Z"
+    },
+    {
+      "id": "entry_1786897851763_lpj4k",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:51.763Z",
+      "updated_at": "2026-08-16T16:30:51.763Z"
+    },
+    {
+      "id": "entry_1786897851760_znn4f",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:51.760Z",
+      "updated_at": "2026-08-16T16:30:51.760Z"
+    },
+    {
+      "id": "entry_1786897851757_kjt0b",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:51.757Z",
+      "updated_at": "2026-08-16T16:30:51.757Z"
+    },
+    {
+      "id": "entry_1786897851754_wfkme",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:51.754Z",
+      "updated_at": "2026-08-16T16:30:51.754Z"
+    },
+    {
+      "id": "entry_1786897851751_vaq2c",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:51.751Z",
+      "updated_at": "2026-08-16T16:30:51.751Z"
+    },
+    {
+      "id": "entry_1786897851748_m2zgi",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:51.748Z",
+      "updated_at": "2026-08-16T16:30:51.748Z"
+    },
+    {
+      "id": "entry_1786897851723_zkwxp",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:30:51.723Z",
+      "updated_at": "2026-08-16T16:30:51.723Z"
+    },
+    {
+      "id": "entry_1786897851720_4422c",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:30:51.720Z",
+      "updated_at": "2026-08-16T16:30:51.729Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786897811815_od230",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:11.815Z",
+      "updated_at": "2026-08-16T16:30:11.815Z"
+    },
+    {
+      "id": "entry_1786897811812_aeuvm",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:11.812Z",
+      "updated_at": "2026-08-16T16:30:11.812Z"
+    },
+    {
+      "id": "entry_1786897811809_2a9qo",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:11.809Z",
+      "updated_at": "2026-08-16T16:30:11.809Z"
+    },
+    {
+      "id": "entry_1786897811806_7uyxl",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:11.806Z",
+      "updated_at": "2026-08-16T16:30:11.806Z"
+    },
+    {
+      "id": "entry_1786897811803_1aita",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:11.803Z",
+      "updated_at": "2026-08-16T16:30:11.803Z"
+    },
+    {
+      "id": "entry_1786897811800_x919m",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:11.800Z",
+      "updated_at": "2026-08-16T16:30:11.800Z"
+    },
+    {
+      "id": "entry_1786897811797_l5jry",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:11.797Z",
+      "updated_at": "2026-08-16T16:30:11.797Z"
+    },
+    {
+      "id": "entry_1786897811794_2fp5s",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:11.794Z",
+      "updated_at": "2026-08-16T16:30:11.794Z"
+    },
+    {
+      "id": "entry_1786897811790_dhix9",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:11.790Z",
+      "updated_at": "2026-08-16T16:30:11.790Z"
+    },
+    {
+      "id": "entry_1786897811788_ade37",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:30:11.788Z",
+      "updated_at": "2026-08-16T16:30:11.788Z"
+    },
+    {
+      "id": "entry_1786897811761_g0jns",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:30:11.761Z",
+      "updated_at": "2026-08-16T16:30:11.761Z"
+    },
+    {
+      "id": "entry_1786897811758_my843",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:30:11.758Z",
+      "updated_at": "2026-08-16T16:30:11.767Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786897720338_3uwxd",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:28:40.338Z",
+      "updated_at": "2026-08-16T16:28:40.338Z"
+    },
+    {
+      "id": "entry_1786897720335_9mo9i",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:28:40.335Z",
+      "updated_at": "2026-08-16T16:28:40.335Z"
+    },
+    {
+      "id": "entry_1786897720332_riu9j",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:28:40.332Z",
+      "updated_at": "2026-08-16T16:28:40.332Z"
+    },
+    {
+      "id": "entry_1786897720329_ctkl5",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:28:40.329Z",
+      "updated_at": "2026-08-16T16:28:40.329Z"
+    },
+    {
+      "id": "entry_1786897720326_f3q3u",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:28:40.326Z",
+      "updated_at": "2026-08-16T16:28:40.326Z"
+    },
+    {
+      "id": "entry_1786897720322_h5eer",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:28:40.322Z",
+      "updated_at": "2026-08-16T16:28:40.322Z"
+    },
+    {
+      "id": "entry_1786897720317_cgx3o",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:28:40.317Z",
+      "updated_at": "2026-08-16T16:28:40.317Z"
+    },
+    {
+      "id": "entry_1786897720312_aur75",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:28:40.312Z",
+      "updated_at": "2026-08-16T16:28:40.312Z"
+    },
+    {
+      "id": "entry_1786897720307_b6rz8",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:28:40.306Z",
+      "updated_at": "2026-08-16T16:28:40.306Z"
+    },
+    {
+      "id": "entry_1786897720302_wdphb",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:28:40.302Z",
+      "updated_at": "2026-08-16T16:28:40.302Z"
+    },
+    {
+      "id": "entry_1786897720273_kzlyt",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:28:40.273Z",
+      "updated_at": "2026-08-16T16:28:40.273Z"
+    },
+    {
+      "id": "entry_1786897720271_g4xvi",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:28:40.271Z",
+      "updated_at": "2026-08-16T16:28:40.281Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786897658873_sobcg",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:27:38.873Z",
+      "updated_at": "2026-08-16T16:27:38.873Z"
+    },
+    {
+      "id": "entry_1786897658870_w3a1f",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:27:38.870Z",
+      "updated_at": "2026-08-16T16:27:38.870Z"
+    },
+    {
+      "id": "entry_1786897658868_ohk6f",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:27:38.868Z",
+      "updated_at": "2026-08-16T16:27:38.868Z"
+    },
+    {
+      "id": "entry_1786897658865_tdqw5",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:27:38.865Z",
+      "updated_at": "2026-08-16T16:27:38.865Z"
+    },
+    {
+      "id": "entry_1786897658862_anevd",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:27:38.862Z",
+      "updated_at": "2026-08-16T16:27:38.862Z"
+    },
+    {
+      "id": "entry_1786897658860_lnasl",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:27:38.860Z",
+      "updated_at": "2026-08-16T16:27:38.860Z"
+    },
+    {
+      "id": "entry_1786897658857_b8nax",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:27:38.857Z",
+      "updated_at": "2026-08-16T16:27:38.857Z"
+    },
+    {
+      "id": "entry_1786897658854_ppf36",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:27:38.854Z",
+      "updated_at": "2026-08-16T16:27:38.854Z"
+    },
+    {
+      "id": "entry_1786897658851_tu1t2",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:27:38.851Z",
+      "updated_at": "2026-08-16T16:27:38.851Z"
+    },
+    {
+      "id": "entry_1786897658848_59704",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:27:38.848Z",
+      "updated_at": "2026-08-16T16:27:38.848Z"
+    },
+    {
+      "id": "entry_1786897658825_n2ea3",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:27:38.825Z",
+      "updated_at": "2026-08-16T16:27:38.825Z"
+    },
+    {
+      "id": "entry_1786897658821_12mdu",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:27:38.821Z",
+      "updated_at": "2026-08-16T16:27:38.831Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786897531770_7v7i9",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:25:31.770Z",
+      "updated_at": "2026-08-16T16:25:31.770Z"
+    },
+    {
+      "id": "entry_1786897531767_85171",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:25:31.767Z",
+      "updated_at": "2026-08-16T16:25:31.767Z"
+    },
+    {
+      "id": "entry_1786897531764_g8cxd",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:25:31.764Z",
+      "updated_at": "2026-08-16T16:25:31.764Z"
+    },
+    {
+      "id": "entry_1786897531761_t0oim",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:25:31.761Z",
+      "updated_at": "2026-08-16T16:25:31.761Z"
+    },
+    {
+      "id": "entry_1786897531759_qj90l",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:25:31.759Z",
+      "updated_at": "2026-08-16T16:25:31.759Z"
+    },
+    {
+      "id": "entry_1786897531756_ldlgg",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:25:31.756Z",
+      "updated_at": "2026-08-16T16:25:31.756Z"
+    },
+    {
+      "id": "entry_1786897531752_aajfc",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:25:31.752Z",
+      "updated_at": "2026-08-16T16:25:31.752Z"
+    },
+    {
+      "id": "entry_1786897531749_acsz4",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:25:31.749Z",
+      "updated_at": "2026-08-16T16:25:31.749Z"
+    },
+    {
+      "id": "entry_1786897531746_lhc0r",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:25:31.746Z",
+      "updated_at": "2026-08-16T16:25:31.746Z"
+    },
+    {
+      "id": "entry_1786897531744_86kjw",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:25:31.744Z",
+      "updated_at": "2026-08-16T16:25:31.744Z"
+    },
+    {
+      "id": "entry_1786897531721_tbs9i",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:25:31.721Z",
+      "updated_at": "2026-08-16T16:25:31.721Z"
+    },
+    {
+      "id": "entry_1786897531718_nr102",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:25:31.718Z",
+      "updated_at": "2026-08-16T16:25:31.727Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786897366695_69a06",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:22:46.695Z",
+      "updated_at": "2026-08-16T16:22:46.695Z"
+    },
+    {
+      "id": "entry_1786897366691_9k2nj",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:22:46.691Z",
+      "updated_at": "2026-08-16T16:22:46.691Z"
+    },
+    {
+      "id": "entry_1786897366687_2zwcb",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:22:46.687Z",
+      "updated_at": "2026-08-16T16:22:46.687Z"
+    },
+    {
+      "id": "entry_1786897366684_n7bb7",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:22:46.684Z",
+      "updated_at": "2026-08-16T16:22:46.684Z"
+    },
+    {
+      "id": "entry_1786897366681_a73uy",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:22:46.681Z",
+      "updated_at": "2026-08-16T16:22:46.681Z"
+    },
+    {
+      "id": "entry_1786897366678_vo1vw",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:22:46.678Z",
+      "updated_at": "2026-08-16T16:22:46.678Z"
+    },
+    {
+      "id": "entry_1786897366675_0p9qd",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:22:46.675Z",
+      "updated_at": "2026-08-16T16:22:46.675Z"
+    },
+    {
+      "id": "entry_1786897366672_ptyvf",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:22:46.672Z",
+      "updated_at": "2026-08-16T16:22:46.672Z"
+    },
+    {
+      "id": "entry_1786897366668_l1xpe",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:22:46.668Z",
+      "updated_at": "2026-08-16T16:22:46.668Z"
+    },
+    {
+      "id": "entry_1786897366665_90chp",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:22:46.665Z",
+      "updated_at": "2026-08-16T16:22:46.665Z"
+    },
+    {
+      "id": "entry_1786897366637_4a0eo",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:22:46.636Z",
+      "updated_at": "2026-08-16T16:22:46.636Z"
+    },
+    {
+      "id": "entry_1786897366633_bippa",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:22:46.633Z",
+      "updated_at": "2026-08-16T16:22:46.645Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786897243798_zqs5x",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:20:43.798Z",
+      "updated_at": "2026-08-16T16:20:43.798Z"
+    },
+    {
+      "id": "entry_1786897243793_q3g1x",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:20:43.793Z",
+      "updated_at": "2026-08-16T16:20:43.793Z"
+    },
+    {
+      "id": "entry_1786897243788_qpzaq",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:20:43.788Z",
+      "updated_at": "2026-08-16T16:20:43.788Z"
+    },
+    {
+      "id": "entry_1786897243782_kr2jm",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:20:43.782Z",
+      "updated_at": "2026-08-16T16:20:43.782Z"
+    },
+    {
+      "id": "entry_1786897243777_unxuy",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:20:43.777Z",
+      "updated_at": "2026-08-16T16:20:43.777Z"
+    },
+    {
+      "id": "entry_1786897243772_an6ze",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:20:43.772Z",
+      "updated_at": "2026-08-16T16:20:43.772Z"
+    },
+    {
+      "id": "entry_1786897243767_z85wc",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:20:43.767Z",
+      "updated_at": "2026-08-16T16:20:43.767Z"
+    },
+    {
+      "id": "entry_1786897243762_vgtph",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:20:43.762Z",
+      "updated_at": "2026-08-16T16:20:43.762Z"
+    },
+    {
+      "id": "entry_1786897243755_0niwl",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:20:43.755Z",
+      "updated_at": "2026-08-16T16:20:43.755Z"
+    },
+    {
+      "id": "entry_1786897243751_sa1m2",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:20:43.751Z",
+      "updated_at": "2026-08-16T16:20:43.751Z"
+    },
+    {
+      "id": "entry_1786897243706_a2hpx",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:20:43.706Z",
+      "updated_at": "2026-08-16T16:20:43.706Z"
+    },
+    {
+      "id": "entry_1786897243697_aph64",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:20:43.697Z",
+      "updated_at": "2026-08-16T16:20:43.720Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786897108029_pjbs6",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:18:28.029Z",
+      "updated_at": "2026-08-16T16:18:28.029Z"
+    },
+    {
+      "id": "entry_1786897108024_cnfhc",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:18:28.024Z",
+      "updated_at": "2026-08-16T16:18:28.024Z"
+    },
+    {
+      "id": "entry_1786897108020_1btm5",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:18:28.020Z",
+      "updated_at": "2026-08-16T16:18:28.020Z"
+    },
+    {
+      "id": "entry_1786897108015_hvo00",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:18:28.015Z",
+      "updated_at": "2026-08-16T16:18:28.015Z"
+    },
+    {
+      "id": "entry_1786897108009_b0qcq",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:18:28.009Z",
+      "updated_at": "2026-08-16T16:18:28.009Z"
+    },
+    {
+      "id": "entry_1786897108004_iaeg0",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:18:28.004Z",
+      "updated_at": "2026-08-16T16:18:28.004Z"
+    },
+    {
+      "id": "entry_1786897107999_uqpff",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:18:27.999Z",
+      "updated_at": "2026-08-16T16:18:27.999Z"
+    },
+    {
+      "id": "entry_1786897107995_9qiqf",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:18:27.995Z",
+      "updated_at": "2026-08-16T16:18:27.995Z"
+    },
+    {
+      "id": "entry_1786897107990_899kk",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:18:27.990Z",
+      "updated_at": "2026-08-16T16:18:27.990Z"
+    },
+    {
+      "id": "entry_1786897107986_56cbk",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:18:27.986Z",
+      "updated_at": "2026-08-16T16:18:27.986Z"
+    },
+    {
+      "id": "entry_1786897107946_0av5u",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:18:27.946Z",
+      "updated_at": "2026-08-16T16:18:27.946Z"
+    },
+    {
+      "id": "entry_1786897107941_colxh",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:18:27.941Z",
+      "updated_at": "2026-08-16T16:18:27.957Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786896841817_4bq8k",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:14:01.817Z",
+      "updated_at": "2026-08-16T16:14:01.817Z"
+    },
+    {
+      "id": "entry_1786896841811_voc5i",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:14:01.811Z",
+      "updated_at": "2026-08-16T16:14:01.811Z"
+    },
+    {
+      "id": "entry_1786896841805_9j8sk",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:14:01.805Z",
+      "updated_at": "2026-08-16T16:14:01.805Z"
+    },
+    {
+      "id": "entry_1786896841798_kvvyn",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:14:01.798Z",
+      "updated_at": "2026-08-16T16:14:01.798Z"
+    },
+    {
+      "id": "entry_1786896841792_wngl7",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:14:01.792Z",
+      "updated_at": "2026-08-16T16:14:01.792Z"
+    },
+    {
+      "id": "entry_1786896841786_jl9kj",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:14:01.786Z",
+      "updated_at": "2026-08-16T16:14:01.786Z"
+    },
+    {
+      "id": "entry_1786896841780_lqyti",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:14:01.780Z",
+      "updated_at": "2026-08-16T16:14:01.780Z"
+    },
+    {
+      "id": "entry_1786896841773_1s0n7",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:14:01.773Z",
+      "updated_at": "2026-08-16T16:14:01.773Z"
+    },
+    {
+      "id": "entry_1786896841766_j4i2k",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:14:01.766Z",
+      "updated_at": "2026-08-16T16:14:01.766Z"
+    },
+    {
+      "id": "entry_1786896841760_lhml9",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:14:01.760Z",
+      "updated_at": "2026-08-16T16:14:01.760Z"
+    },
+    {
+      "id": "entry_1786896841705_c6upn",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:14:01.705Z",
+      "updated_at": "2026-08-16T16:14:01.705Z"
+    },
+    {
+      "id": "entry_1786896841698_uezqn",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:14:01.698Z",
+      "updated_at": "2026-08-16T16:14:01.717Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786896464732_389dz",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:07:44.732Z",
+      "updated_at": "2026-08-16T16:07:44.732Z"
+    },
+    {
+      "id": "entry_1786896464728_k3n9f",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:07:44.728Z",
+      "updated_at": "2026-08-16T16:07:44.728Z"
+    },
+    {
+      "id": "entry_1786896464725_v200r",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:07:44.725Z",
+      "updated_at": "2026-08-16T16:07:44.725Z"
+    },
+    {
+      "id": "entry_1786896464720_3u80n",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:07:44.720Z",
+      "updated_at": "2026-08-16T16:07:44.720Z"
+    },
+    {
+      "id": "entry_1786896464716_h448c",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:07:44.716Z",
+      "updated_at": "2026-08-16T16:07:44.716Z"
+    },
+    {
+      "id": "entry_1786896464712_eqm9u",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:07:44.712Z",
+      "updated_at": "2026-08-16T16:07:44.712Z"
+    },
+    {
+      "id": "entry_1786896464707_nbjv0",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:07:44.707Z",
+      "updated_at": "2026-08-16T16:07:44.707Z"
+    },
+    {
+      "id": "entry_1786896464702_ux77x",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:07:44.702Z",
+      "updated_at": "2026-08-16T16:07:44.702Z"
+    },
+    {
+      "id": "entry_1786896464696_f54rt",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:07:44.696Z",
+      "updated_at": "2026-08-16T16:07:44.696Z"
+    },
+    {
+      "id": "entry_1786896464691_3ltif",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T16:07:44.691Z",
+      "updated_at": "2026-08-16T16:07:44.691Z"
+    },
+    {
+      "id": "entry_1786896464637_msyde",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:07:44.637Z",
+      "updated_at": "2026-08-16T16:07:44.637Z"
+    },
+    {
+      "id": "entry_1786896464628_7q08d",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T16:07:44.628Z",
+      "updated_at": "2026-08-16T16:07:44.650Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786895646097_xn7i0",
+      "type": "reflection",
+      "content": "Overwhelmed with decisions",
+      "source": "dashboard",
+      "tags": [],
+      "mood_state": "Cognitive & Emotional Overload",
+      "notes": "High performance is not about nonstop output. True mastery is knowing when to retreat to the sanctuary and restore.",
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:54:06.097Z",
+      "updated_at": "2026-08-16T15:54:06.097Z"
+    },
+    {
+      "id": "entry_1786895643945_jaciq",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Nietzsche_1p0kn",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:54:03.945Z",
+      "updated_at": "2026-08-16T15:54:03.945Z"
+    },
+    {
+      "id": "entry_1786895641410_vfs26",
+      "type": "quote",
+      "content": "Mindful wisdom hiigt",
+      "author": "Author_2r7nq",
+      "source": "dashboard",
+      "tags": [
+        "Perspective"
+      ],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:54:01.409Z",
+      "updated_at": "2026-08-16T15:54:01.409Z"
+    },
+    {
+      "id": "entry_1786895614494_pmdgk",
+      "type": "quote",
+      "content": "Simplicity is the ultimate sophistication. 2bx5",
+      "author": "Leonardo da Vinci",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:53:34.494Z",
+      "updated_at": "2026-08-16T15:53:34.494Z"
+    },
+    {
+      "id": "entry_1786895610698_9l797",
+      "type": "reflection",
+      "content": "Overwhelmed with decisions",
+      "source": "dashboard",
+      "tags": [],
+      "mood_state": "Cognitive & Emotional Overload",
+      "notes": "High performance is not about nonstop output. True mastery is knowing when to retreat to the sanctuary and restore.",
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:53:30.698Z",
+      "updated_at": "2026-08-16T15:53:30.698Z"
+    },
+    {
+      "id": "entry_1786895608620_g7a2f",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Nietzsche_4h1do",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:53:28.620Z",
+      "updated_at": "2026-08-16T15:53:28.620Z"
+    },
+    {
+      "id": "entry_1786895604538_5quen",
+      "type": "quote",
+      "content": "Mindful wisdom mnuiy",
+      "author": "Author_wn9aa",
+      "source": "dashboard",
+      "tags": [
+        "Perspective"
+      ],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:53:24.538Z",
+      "updated_at": "2026-08-16T15:53:24.538Z"
+    },
+    {
+      "id": "entry_1786895596183_gm626",
+      "type": "quote",
+      "content": "Simplicity is the ultimate sophistication. ny0k",
+      "author": "Leonardo da Vinci",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:53:16.183Z",
+      "updated_at": "2026-08-16T15:53:16.183Z"
+    },
+    {
+      "id": "entry_1786895592591_tq9tb",
+      "type": "reflection",
+      "content": "Overwhelmed with decisions",
+      "source": "dashboard",
+      "tags": [],
+      "mood_state": "Cognitive & Emotional Overload",
+      "notes": "You are allowed to stop carrying the weight of tomorrow. Put down the invisible backpack. Just this one breath is enough.",
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:53:12.591Z",
+      "updated_at": "2026-08-16T15:53:12.591Z"
+    },
+    {
+      "id": "entry_1786895590549_qenvw",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Nietzsche_5w2a4",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:53:10.549Z",
+      "updated_at": "2026-08-16T15:53:10.549Z"
+    },
+    {
+      "id": "entry_1786895586031_1a5ql",
+      "type": "quote",
+      "content": "Mindful wisdom n88gw",
+      "author": "Author_5l5oq",
+      "source": "dashboard",
+      "tags": [
+        "Perspective"
+      ],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:53:06.031Z",
+      "updated_at": "2026-08-16T15:53:06.031Z"
+    },
+    {
+      "id": "entry_1786895496529_pdsac",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:51:36.529Z",
+      "updated_at": "2026-08-16T15:51:36.529Z"
+    },
+    {
+      "id": "entry_1786895496524_4anky",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:51:36.524Z",
+      "updated_at": "2026-08-16T15:51:36.524Z"
+    },
+    {
+      "id": "entry_1786895496518_kqzx0",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:51:36.518Z",
+      "updated_at": "2026-08-16T15:51:36.518Z"
+    },
+    {
+      "id": "entry_1786895496513_zuj2r",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:51:36.513Z",
+      "updated_at": "2026-08-16T15:51:36.513Z"
+    },
+    {
+      "id": "entry_1786895496507_wj01i",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:51:36.507Z",
+      "updated_at": "2026-08-16T15:51:36.507Z"
+    },
+    {
+      "id": "entry_1786895496500_njjm7",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:51:36.500Z",
+      "updated_at": "2026-08-16T15:51:36.500Z"
+    },
+    {
+      "id": "entry_1786895496496_f3vuu",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:51:36.496Z",
+      "updated_at": "2026-08-16T15:51:36.496Z"
+    },
+    {
+      "id": "entry_1786895496491_ev1md",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:51:36.491Z",
+      "updated_at": "2026-08-16T15:51:36.491Z"
+    },
+    {
+      "id": "entry_1786895496486_77dcf",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:51:36.486Z",
+      "updated_at": "2026-08-16T15:51:36.486Z"
+    },
+    {
+      "id": "entry_1786895496482_08m0b",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:51:36.482Z",
+      "updated_at": "2026-08-16T15:51:36.482Z"
+    },
+    {
+      "id": "entry_1786895496438_nsjm5",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:51:36.438Z",
+      "updated_at": "2026-08-16T15:51:36.438Z"
+    },
+    {
+      "id": "entry_1786895496433_x75m1",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:51:36.433Z",
+      "updated_at": "2026-08-16T15:51:36.449Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786895479620_vf097",
+      "type": "quote",
+      "content": "Simplicity is the ultimate sophistication. ozel",
+      "author": "Leonardo da Vinci",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:51:19.620Z",
+      "updated_at": "2026-08-16T15:51:19.620Z"
+    },
+    {
+      "id": "entry_1786895441544_gzc8p",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Nietzsche_cu9qi",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:50:41.544Z",
+      "updated_at": "2026-08-16T15:50:41.544Z"
+    },
+    {
+      "id": "entry_1786895432475_am5au",
+      "type": "quote",
+      "content": "Mindful wisdom dxqr8",
+      "author": "Author_62v1l",
+      "source": "dashboard",
+      "tags": [
+        "Perspective"
+      ],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:50:32.475Z",
+      "updated_at": "2026-08-16T15:50:32.475Z"
+    },
+    {
+      "id": "entry_1786895417564_picis",
+      "type": "quote",
+      "content": "Simplicity is the ultimate sophistication. t8rs",
+      "author": "Leonardo da Vinci",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:50:17.564Z",
+      "updated_at": "2026-08-16T15:50:17.564Z"
+    },
+    {
+      "id": "entry_1786895413659_q3sym",
+      "type": "reflection",
+      "content": "Overwhelmed with decisions",
+      "source": "dashboard",
+      "tags": [],
+      "mood_state": "Cognitive & Emotional Overload",
+      "notes": "When everything feels heavy, it's not a sign that you are failing—it's a biological signal that your system needs quiet, not more effort.",
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:50:13.659Z",
+      "updated_at": "2026-08-16T15:50:13.659Z"
+    },
+    {
+      "id": "entry_1786895411447_2kmg9",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Nietzsche_wfttv",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:50:11.447Z",
+      "updated_at": "2026-08-16T15:50:11.447Z"
+    },
+    {
+      "id": "entry_1786895401276_rjead",
+      "type": "quote",
+      "content": "Mindful wisdom 2mn53",
+      "author": "Author_4hwsj",
+      "source": "dashboard",
+      "tags": [
+        "Perspective"
+      ],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:50:01.276Z",
+      "updated_at": "2026-08-16T15:50:01.276Z"
+    },
+    {
+      "id": "entry_1786895330478_m3r0e",
+      "type": "quote",
+      "content": "Simplicity is the ultimate sophistication. knjh",
+      "author": "Leonardo da Vinci",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:48:50.478Z",
+      "updated_at": "2026-08-16T15:48:50.478Z"
+    },
+    {
+      "id": "entry_1786895317734_ao6aa",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Nietzsche_hslzc",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:48:37.734Z",
+      "updated_at": "2026-08-16T15:48:37.734Z"
+    },
+    {
+      "id": "entry_1786895277978_t4l6s",
+      "type": "quote",
+      "content": "Simplicity is the ultimate sophistication. u7ns",
+      "author": "Leonardo da Vinci",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:47:57.978Z",
+      "updated_at": "2026-08-16T15:47:57.978Z"
+    },
+    {
+      "id": "entry_1786895265401_3zq7l",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Nietzsche_snvjz",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:47:45.401Z",
+      "updated_at": "2026-08-16T15:47:45.401Z"
+    },
+    {
+      "id": "entry_1786895258294_vocvq",
+      "type": "quote",
+      "content": "Simplicity is the ultimate sophistication. xb0u",
+      "author": "Leonardo da Vinci",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:47:38.294Z",
+      "updated_at": "2026-08-16T15:47:38.294Z"
+    },
+    {
+      "id": "entry_1786895245640_j4hj7",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Nietzsche_jpqom",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:47:25.640Z",
+      "updated_at": "2026-08-16T15:47:25.640Z"
+    },
+    {
+      "id": "entry_1786895219911_j3h7n",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:46:59.911Z",
+      "updated_at": "2026-08-16T15:46:59.911Z"
+    },
+    {
+      "id": "entry_1786895219906_aeqeo",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:46:59.906Z",
+      "updated_at": "2026-08-16T15:46:59.906Z"
+    },
+    {
+      "id": "entry_1786895219901_04v4t",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:46:59.901Z",
+      "updated_at": "2026-08-16T15:46:59.901Z"
+    },
+    {
+      "id": "entry_1786895219896_tq2o3",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:46:59.896Z",
+      "updated_at": "2026-08-16T15:46:59.896Z"
+    },
+    {
+      "id": "entry_1786895219892_df158",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:46:59.892Z",
+      "updated_at": "2026-08-16T15:46:59.892Z"
+    },
+    {
+      "id": "entry_1786895219886_4so14",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:46:59.886Z",
+      "updated_at": "2026-08-16T15:46:59.886Z"
+    },
+    {
+      "id": "entry_1786895219882_ljqm4",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:46:59.882Z",
+      "updated_at": "2026-08-16T15:46:59.882Z"
+    },
+    {
+      "id": "entry_1786895219877_3xhar",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:46:59.877Z",
+      "updated_at": "2026-08-16T15:46:59.877Z"
+    },
+    {
+      "id": "entry_1786895219868_hjkpd",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:46:59.868Z",
+      "updated_at": "2026-08-16T15:46:59.868Z"
+    },
+    {
+      "id": "entry_1786895219864_una35",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:46:59.864Z",
+      "updated_at": "2026-08-16T15:46:59.864Z"
+    },
+    {
+      "id": "entry_1786895219823_j42ry",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:46:59.823Z",
+      "updated_at": "2026-08-16T15:46:59.823Z"
+    },
+    {
+      "id": "entry_1786895219818_gyw1m",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:46:59.818Z",
+      "updated_at": "2026-08-16T15:46:59.833Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786895203372_c78j0",
+      "type": "quote",
+      "content": "Simplicity is the ultimate sophistication.",
+      "author": "Leonardo da Vinci",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:46:43.372Z",
+      "updated_at": "2026-08-16T15:46:43.372Z"
+    },
+    {
+      "id": "entry_1786895196906_rcasa",
+      "type": "quote",
+      "content": "Simplicity is the ultimate sophistication.",
+      "author": "Leonardo da Vinci",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:46:36.906Z",
+      "updated_at": "2026-08-16T15:46:36.906Z"
+    },
+    {
+      "id": "entry_1786895166425_agpn6",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Friedrich Nietzsche",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:46:06.425Z",
+      "updated_at": "2026-08-16T15:46:06.425Z"
+    },
+    {
+      "id": "entry_1786895161830_0qj9u",
+      "type": "quote",
+      "content": "The soul becomes dyed with the color of its thoughts.",
+      "author": "Marcus Aurelius",
+      "source": "dashboard",
+      "tags": [
+        "Perspective"
+      ],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:46:01.830Z",
+      "updated_at": "2026-08-16T15:46:01.830Z"
+    },
+    {
+      "id": "entry_1786895160890_ulngl",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Friedrich Nietzsche",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:46:00.889Z",
+      "updated_at": "2026-08-16T15:46:00.889Z"
+    },
+    {
+      "id": "entry_1786895143854_lviwk",
+      "type": "quote",
+      "content": "Simplicity is the ultimate sophistication.",
+      "author": "Leonardo da Vinci",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:45:43.854Z",
+      "updated_at": "2026-08-16T15:45:43.854Z"
+    },
+    {
+      "id": "entry_1786895107901_887gq",
+      "type": "quote",
+      "content": "He who has a why to live can bear almost any how.",
+      "author": "Friedrich Nietzsche",
+      "source": "dashboard",
+      "tags": [],
+      "is_pinned": true,
+      "created_at": "2026-08-16T15:45:07.901Z",
+      "updated_at": "2026-08-16T15:45:07.901Z"
+    },
+    {
+      "id": "entry_1786895084022_17ch2",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:44:44.022Z",
+      "updated_at": "2026-08-16T15:44:44.022Z"
+    },
+    {
+      "id": "entry_1786895084017_xeo3j",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:44:44.017Z",
+      "updated_at": "2026-08-16T15:44:44.017Z"
+    },
+    {
+      "id": "entry_1786895084014_glnqr",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:44:44.014Z",
+      "updated_at": "2026-08-16T15:44:44.014Z"
+    },
+    {
+      "id": "entry_1786895084009_94yd5",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:44:44.009Z",
+      "updated_at": "2026-08-16T15:44:44.009Z"
+    },
+    {
+      "id": "entry_1786895084005_liqkm",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:44:44.005Z",
+      "updated_at": "2026-08-16T15:44:44.005Z"
+    },
+    {
+      "id": "entry_1786895084001_ngozl",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:44:44.001Z",
+      "updated_at": "2026-08-16T15:44:44.001Z"
+    },
+    {
+      "id": "entry_1786895083996_wxuxl",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:44:43.996Z",
+      "updated_at": "2026-08-16T15:44:43.996Z"
+    },
+    {
+      "id": "entry_1786895083992_7v7jc",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:44:43.992Z",
+      "updated_at": "2026-08-16T15:44:43.992Z"
+    },
+    {
+      "id": "entry_1786895083988_4k489",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:44:43.988Z",
+      "updated_at": "2026-08-16T15:44:43.988Z"
+    },
+    {
+      "id": "entry_1786895083984_y3y7o",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:44:43.984Z",
+      "updated_at": "2026-08-16T15:44:43.984Z"
+    },
+    {
+      "id": "entry_1786895083944_p2wd4",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:44:43.944Z",
+      "updated_at": "2026-08-16T15:44:43.944Z"
+    },
+    {
+      "id": "entry_1786895083940_tnev5",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:44:43.940Z",
+      "updated_at": "2026-08-16T15:44:43.955Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786894870742_ur1pf",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:41:10.742Z",
+      "updated_at": "2026-08-16T15:41:10.742Z"
+    },
+    {
+      "id": "entry_1786894870738_nqu9z",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:41:10.738Z",
+      "updated_at": "2026-08-16T15:41:10.738Z"
+    },
+    {
+      "id": "entry_1786894870733_coml6",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:41:10.733Z",
+      "updated_at": "2026-08-16T15:41:10.733Z"
+    },
+    {
+      "id": "entry_1786894870728_u8wrm",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:41:10.728Z",
+      "updated_at": "2026-08-16T15:41:10.728Z"
+    },
+    {
+      "id": "entry_1786894870724_22x3r",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:41:10.724Z",
+      "updated_at": "2026-08-16T15:41:10.724Z"
+    },
+    {
+      "id": "entry_1786894870719_h1427",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:41:10.718Z",
+      "updated_at": "2026-08-16T15:41:10.718Z"
+    },
+    {
+      "id": "entry_1786894870714_b1ach",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:41:10.714Z",
+      "updated_at": "2026-08-16T15:41:10.714Z"
+    },
+    {
+      "id": "entry_1786894870710_75bhv",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:41:10.710Z",
+      "updated_at": "2026-08-16T15:41:10.710Z"
+    },
+    {
+      "id": "entry_1786894870705_ojq4t",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:41:10.705Z",
+      "updated_at": "2026-08-16T15:41:10.705Z"
+    },
+    {
+      "id": "entry_1786894870702_cmdqx",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:41:10.702Z",
+      "updated_at": "2026-08-16T15:41:10.702Z"
+    },
+    {
+      "id": "entry_1786894870664_7eh2o",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:41:10.664Z",
+      "updated_at": "2026-08-16T15:41:10.664Z"
+    },
+    {
+      "id": "entry_1786894870660_uzsce",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:41:10.660Z",
+      "updated_at": "2026-08-16T15:41:10.673Z",
+      "notes": "Remember this during stressful meetings"
+    },
+    {
+      "id": "entry_1786894855323_84eb0",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:40:55.323Z",
+      "updated_at": "2026-08-16T15:40:55.323Z"
+    },
+    {
+      "id": "entry_1786894855320_rkc8e",
+      "type": "quote",
+      "content": "You have power over your mind - not outside events.",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "tags": [
+        "Stoicism",
+        "Peace",
+        "Clarity"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:40:55.320Z",
+      "updated_at": "2026-08-16T15:40:55.320Z"
+    },
+    {
+      "id": "entry_1786894351284_c0qq1",
+      "type": "idea",
+      "content": "Concurrent test idea #9",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:32:31.284Z",
+      "updated_at": "2026-08-16T15:32:31.284Z"
+    },
+    {
+      "id": "entry_1786894351282_kdwxd",
+      "type": "idea",
+      "content": "Concurrent test idea #8",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:32:31.282Z",
+      "updated_at": "2026-08-16T15:32:31.282Z"
+    },
+    {
+      "id": "entry_1786894351279_mje8k",
+      "type": "idea",
+      "content": "Concurrent test idea #7",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:32:31.279Z",
+      "updated_at": "2026-08-16T15:32:31.279Z"
+    },
+    {
+      "id": "entry_1786894351276_smomi",
+      "type": "idea",
+      "content": "Concurrent test idea #6",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:32:31.276Z",
+      "updated_at": "2026-08-16T15:32:31.276Z"
+    },
+    {
+      "id": "entry_1786894351273_zqedc",
+      "type": "idea",
+      "content": "Concurrent test idea #5",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:32:31.273Z",
+      "updated_at": "2026-08-16T15:32:31.273Z"
+    },
+    {
+      "id": "entry_1786894351270_it103",
+      "type": "idea",
+      "content": "Concurrent test idea #4",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:32:31.270Z",
+      "updated_at": "2026-08-16T15:32:31.270Z"
+    },
+    {
+      "id": "entry_1786894351267_oa1fq",
+      "type": "idea",
+      "content": "Concurrent test idea #3",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:32:31.267Z",
+      "updated_at": "2026-08-16T15:32:31.267Z"
+    },
+    {
+      "id": "entry_1786894351264_g177b",
+      "type": "idea",
+      "content": "Concurrent test idea #2",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:32:31.264Z",
+      "updated_at": "2026-08-16T15:32:31.264Z"
+    },
+    {
+      "id": "entry_1786894351261_fwdo6",
+      "type": "idea",
+      "content": "Concurrent test idea #1",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:32:31.261Z",
+      "updated_at": "2026-08-16T15:32:31.261Z"
+    },
+    {
+      "id": "entry_1786894351259_1uqva",
+      "type": "idea",
+      "content": "Concurrent test idea #0",
+      "source": "api",
+      "tags": [
+        "StressTest"
+      ],
+      "created_at": "2026-08-16T15:32:31.259Z",
+      "updated_at": "2026-08-16T15:32:31.259Z"
+    },
+    {
+      "id": "entry_1786894351235_xlt3z",
+      "type": "diary",
+      "content": "A quiet evening walking in the rain. Felt clear and grounded.",
+      "source": "chatgpt",
+      "tags": [
+        "Presence",
+        "Walk"
+      ],
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:32:31.235Z",
+      "updated_at": "2026-08-16T15:32:31.235Z"
+    },
+    {
+      "id": "entry_1786894351232_rwbqr",
+      "type": "quote",
+      "author": "Marcus Aurelius",
+      "source": "chatgpt",
+      "is_pinned": false,
+      "created_at": "2026-08-16T15:32:31.232Z",
+      "updated_at": "2026-08-16T15:32:31.241Z",
+      "notes": "Remember this during stressful meetings"
+    }
+  ],
+  "todos": [
+    {
+      "id": "todo_1786898926019_098h4",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:48:46.018Z",
+      "completed_at": "2026-08-16T16:48:46.030Z"
+    },
+    {
+      "id": "todo_1786898307348_d9512",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:38:27.348Z",
+      "completed_at": "2026-08-16T16:38:27.355Z"
+    },
+    {
+      "id": "todo_1786898037131_o31yx",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:33:57.131Z",
+      "completed_at": "2026-08-16T16:33:57.135Z"
+    },
+    {
+      "id": "todo_1786898009018_ciff8",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:33:29.018Z",
+      "completed_at": "2026-08-16T16:33:29.023Z"
+    },
+    {
+      "id": "todo_1786897891691_a9hxk",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:31:31.691Z",
+      "completed_at": "2026-08-16T16:31:31.695Z"
+    },
+    {
+      "id": "todo_1786897851732_h5x4y",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:30:51.732Z",
+      "completed_at": "2026-08-16T16:30:51.736Z"
+    },
+    {
+      "id": "todo_1786897811770_lws78",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:30:11.770Z",
+      "completed_at": "2026-08-16T16:30:11.773Z"
+    },
+    {
+      "id": "todo_1786897720284_x9tja",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:28:40.284Z",
+      "completed_at": "2026-08-16T16:28:40.288Z"
+    },
+    {
+      "id": "todo_1786897658834_icngp",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:27:38.834Z",
+      "completed_at": "2026-08-16T16:27:38.837Z"
+    },
+    {
+      "id": "todo_1786897531730_rfpaw",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:25:31.730Z",
+      "completed_at": "2026-08-16T16:25:31.733Z"
+    },
+    {
+      "id": "todo_1786897366648_1l9d5",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:22:46.648Z",
+      "completed_at": "2026-08-16T16:22:46.652Z"
+    },
+    {
+      "id": "todo_1786897243725_rgisw",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:20:43.725Z",
+      "completed_at": "2026-08-16T16:20:43.730Z"
+    },
+    {
+      "id": "todo_1786897107962_ije04",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:18:27.962Z",
+      "completed_at": "2026-08-16T16:18:27.967Z"
+    },
+    {
+      "id": "todo_1786896841728_fblpo",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:14:01.728Z",
+      "completed_at": "2026-08-16T16:14:01.734Z"
+    },
+    {
+      "id": "todo_1786896464659_vdkvz",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T16:07:44.659Z",
+      "completed_at": "2026-08-16T16:07:44.666Z"
+    },
+    {
+      "id": "todo_1786895496455_z54q0",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T15:51:36.455Z",
+      "completed_at": "2026-08-16T15:51:36.461Z"
+    },
+    {
+      "id": "todo_1786895219839_tphdq",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T15:46:59.839Z",
+      "completed_at": "2026-08-16T15:46:59.844Z"
+    },
+    {
+      "id": "todo_1786895083960_a3gxi",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T15:44:43.960Z",
+      "completed_at": "2026-08-16T15:44:43.965Z"
+    },
+    {
+      "id": "todo_1786894870678_93ghs",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T15:41:10.678Z",
+      "completed_at": "2026-08-16T15:41:10.683Z"
+    },
+    {
+      "id": "todo_1786894351244_be5lm",
+      "title": "Review quarterly architecture roadmap",
+      "priority": "high",
+      "source": "chatgpt",
+      "is_completed": true,
+      "created_at": "2026-08-16T15:32:31.244Z",
+      "completed_at": "2026-08-16T15:32:31.247Z"
+    }
+  ],
+  "goals": [
+    {
+      "id": "goal_1786898926038_hksna",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:48:46.038Z",
+      "updated_at": "2026-08-16T16:48:46.038Z"
+    },
+    {
+      "id": "goal_1786898307363_u9hq1",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:38:27.363Z",
+      "updated_at": "2026-08-16T16:38:27.363Z"
+    },
+    {
+      "id": "goal_1786898037138_ute63",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:33:57.138Z",
+      "updated_at": "2026-08-16T16:33:57.138Z"
+    },
+    {
+      "id": "goal_1786898009027_5adfc",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:33:29.027Z",
+      "updated_at": "2026-08-16T16:33:29.027Z"
+    },
+    {
+      "id": "goal_1786897891699_064t5",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:31:31.699Z",
+      "updated_at": "2026-08-16T16:31:31.699Z"
+    },
+    {
+      "id": "goal_1786897851741_n2frp",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:30:51.741Z",
+      "updated_at": "2026-08-16T16:30:51.741Z"
+    },
+    {
+      "id": "goal_1786897811778_up0i9",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:30:11.778Z",
+      "updated_at": "2026-08-16T16:30:11.778Z"
+    },
+    {
+      "id": "goal_1786897720292_tsddu",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:28:40.292Z",
+      "updated_at": "2026-08-16T16:28:40.292Z"
+    },
+    {
+      "id": "goal_1786897658840_g2yyk",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:27:38.840Z",
+      "updated_at": "2026-08-16T16:27:38.840Z"
+    },
+    {
+      "id": "goal_1786897531737_f02zy",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:25:31.737Z",
+      "updated_at": "2026-08-16T16:25:31.737Z"
+    },
+    {
+      "id": "goal_1786897366657_axjyj",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:22:46.656Z",
+      "updated_at": "2026-08-16T16:22:46.656Z"
+    },
+    {
+      "id": "goal_1786897243736_sqn10",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:20:43.736Z",
+      "updated_at": "2026-08-16T16:20:43.736Z"
+    },
+    {
+      "id": "goal_1786897107972_d5sgx",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:18:27.972Z",
+      "updated_at": "2026-08-16T16:18:27.972Z"
+    },
+    {
+      "id": "goal_1786896841742_r4c0q",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:14:01.742Z",
+      "updated_at": "2026-08-16T16:14:01.742Z"
+    },
+    {
+      "id": "goal_1786896464674_kkqa4",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T16:07:44.674Z",
+      "updated_at": "2026-08-16T16:07:44.674Z"
+    },
+    {
+      "id": "goal_1786895496468_aysdp",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T15:51:36.468Z",
+      "updated_at": "2026-08-16T15:51:36.468Z"
+    },
+    {
+      "id": "goal_1786895219850_9n3ik",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T15:46:59.850Z",
+      "updated_at": "2026-08-16T15:46:59.850Z"
+    },
+    {
+      "id": "goal_1786895083971_1yxk2",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T15:44:43.971Z",
+      "updated_at": "2026-08-16T15:44:43.971Z"
+    },
+    {
+      "id": "goal_1786894870688_prl4m",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T15:41:10.688Z",
+      "updated_at": "2026-08-16T15:41:10.688Z"
+    },
+    {
+      "id": "goal_1786894351250_ya1yi",
+      "title": "Achieve deep somatic calm & steady focus",
+      "horizon": "current_season",
+      "description": "Daily meditation and zero rushing",
+      "status": "active",
+      "source": "dashboard",
+      "created_at": "2026-08-16T15:32:31.250Z",
+      "updated_at": "2026-08-16T15:32:31.250Z"
+    }
+  ]
+}

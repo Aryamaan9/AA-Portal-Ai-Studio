@@ -1,0 +1,17 @@
+{
+  "name": "Aryamaan Sanctuary",
+  "short_name": "Sanctuary",
+  "description": "A quiet digital room for life, reflection, wisdom, and intentions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#FAF8F5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
