@@ -1,4 +1,4 @@
-﻿# Logs
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -34,3 +34,6 @@ playwright/.cache/
 .env
 .env.*
 !.env.example
+
+# Firebase
+.firebase/

@@ -42,7 +42,7 @@ export const SidebarNav: React.FC<{ onOpenSwitcher?: () => void }> = ({ onOpenSw
         </div>
 
         {/* Navigation Menu */}
-        <nav className="sidebar-nav-menu">
+        <nav className="sidebar-nav-menu" aria-label="Desktop Navigation">
           <button
             className={`sidebar-nav-btn ${activeTab === 'sanctuary' ? 'active' : ''}`}
             onClick={() => setActiveTab('sanctuary')}

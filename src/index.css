@@ -52,7 +52,7 @@
   --bg-card: #FFFFFF;
   --text-primary: #1B2B25;
   --text-secondary: #3D524A;
-  --text-muted: #738A80;
+  --text-muted: #4A6056;
   --accent-gold: #1E5645;
   --accent-soft: rgba(30, 86, 69, 0.12);
   --border-light: #D5E0DA;
@@ -423,7 +423,7 @@ input, textarea, select {
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: 0.68rem;
 }
 

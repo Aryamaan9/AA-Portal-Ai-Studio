@@ -626,7 +626,7 @@ export const QuotesVault: React.FC = () => {
       {filteredQuotes.length === 0 ? (
         <div className="empty-vault-card">
           <BookOpen size={36} color="var(--accent-gold)" className="empty-icon" />
-          <h3 className="empty-title">Your Wisdom Vault is Empty</h3>
+          <h2 className="empty-title">Your Wisdom Vault is Empty</h2>
           <p className="empty-desc">Capture a quote into the bar above or sync lines from your companion.</p>
         </div>
       ) : (

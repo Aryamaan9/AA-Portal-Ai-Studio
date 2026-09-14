@@ -10,7 +10,7 @@ export const MobileNav: React.FC = () => {
   } = useData();
 
   return (
-    <nav className="sanctuary-mobile-nav-bar">
+    <nav className="sanctuary-mobile-nav-bar" aria-label="Mobile Navigation">
       <button
         className={`mobile-nav-btn ${activeTab === 'sanctuary' ? 'active' : ''}`}
         onClick={() => setActiveTab('sanctuary')}

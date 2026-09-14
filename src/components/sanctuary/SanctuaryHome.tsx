@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import './SanctuaryHome.css';
 import { useData } from '../../context/DataContext';
 import { Quote } from '../../types';
 import {

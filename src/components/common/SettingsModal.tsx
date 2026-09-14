@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useData } from '../../context/DataContext';
 import { exportSanctuaryData, importSanctuaryData } from '../../services/storage';
 import { LLMProviderType, AIProviderConfig } from '../../types';
@@ -13,7 +13,8 @@ import {
   User,
   ExternalLink,
   CheckCircle,
-  AlertCircle
+  AlertCircle,
+  Smartphone
 } from 'lucide-react';
 
 export const SettingsModal: React.FC = () => {
@@ -44,7 +45,22 @@ export const SettingsModal: React.FC = () => {
   const [isTesting, setIsTesting] = useState(false);
   const [testResult, setTestResult] = useState<{ success: boolean; message: string } | null>(null);
 
-  if (!isSettingsOpen) return null;
+  // Android WebAPK / PWA state
+  const [deferredPrompt, setDeferredPrompt] = useState<any>((window as any).__sanctuaryDeferredPrompt || null);
+  const [isStandalone, setIsStandalone] = useState(false);
+
+  useEffect(() => {
+    if (window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone) {
+      setIsStandalone(true);
+    }
+    const handler = (e: Event) => {
+      e.preventDefault();
+      (window as any).__sanctuaryDeferredPrompt = e;
+      setDeferredPrompt(e);
+    };
+    window.addEventListener('beforeinstallprompt', handler);
+    return () => window.removeEventListener('beforeinstallprompt', handler);
+  }, []);
 
   const currentPreset = PROVIDER_PRESETS[provider];
 
@@ -148,6 +164,23 @@ export const SettingsModal: React.FC = () => {
     };
     reader.readAsText(file);
   };
+
+  const handleInstallApp = async () => {
+    const promptEvent = deferredPrompt || (window as any).__sanctuaryDeferredPrompt;
+    if (promptEvent) {
+      promptEvent.prompt();
+      const choice = await promptEvent.userChoice;
+      if (choice.outcome === 'accepted') {
+        setIsStandalone(true);
+        showToast('Aryamaan Sanctuary installed successfully!');
+      }
+      setDeferredPrompt(null);
+    } else {
+      showToast('To install: open browser menu (⋮) and tap "Add to Home screen" / "Install App".');
+    }
+  };
+
+  if (!isSettingsOpen) return null;
 
   return (
     <div className="modal-overlay" onClick={() => setIsSettingsOpen(false)}>
@@ -377,6 +410,32 @@ export const SettingsModal: React.FC = () => {
               >
                 <ShieldCheck size={18} color="var(--accent-gold)" />
                 <span>Local-first architecture. Your keys, quotes, and reflections remain 100% private on your device.</span>
+              </div>
+
+              {/* Android Mobile App / PWA */}
+              <div style={{ marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-light)' }}>
+                <div className="form-label" style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <Smartphone size={15} color="var(--accent-gold)" />
+                  <span>Android & Mobile App</span>
+                </div>
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.75rem', lineHeight: 1.4 }}>
+                  {isStandalone
+                    ? 'Aryamaan Sanctuary is currently running as an installed native app.'
+                    : 'Install directly on your Android phone for full-screen view, custom app icon, and fast offline access.'}
+                </p>
+                {!isStandalone && (
+                  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <button
+                      type="button"
+                      className="btn-primary"
+                      onClick={handleInstallApp}
+                      style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.82rem' }}
+                    >
+                      <Download size={14} />
+                      <span>Install Android App</span>
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           )}

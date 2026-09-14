@@ -85,9 +85,9 @@ export const DiaryNotebook: React.FC = () => {
       {filteredDiary.length === 0 ? (
         <div className="empty-vault-card">
           <BookMarked size={36} color="var(--accent-gold)" className="empty-icon" />
-          <h3 className="empty-title">
+          <h2 className="empty-title">
             {diary.length === 0 ? 'Your Journal is Blank' : 'No matching entries found'}
-          </h3>
+          </h2>
           <p className="empty-desc">
             {diary.length === 0
               ? 'Write on the paper notebook above and click "Save Entry".'

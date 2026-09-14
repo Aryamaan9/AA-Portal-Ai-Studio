@@ -14,6 +14,7 @@ import { BreathModal } from './components/common/BreathModal';
 import { ContemplateModal } from './components/common/ContemplateModal';
 import { SettingsModal } from './components/common/SettingsModal';
 import { WhatsAppSimulatorModal } from './components/common/WhatsAppSimulatorModal';
+import { InstallAppPrompt } from './components/common/InstallAppPrompt';
 import { LayoutSwitcherBar } from './components/layout/LayoutSwitcherBar';
 import { Check } from 'lucide-react';
 
@@ -72,6 +73,9 @@ const SanctuaryShell: React.FC = () => {
         isOpen={isWhatsAppSimOpen}
         onClose={() => setIsWhatsAppSimOpen(false)}
       />
+
+      {/* Android PWA / WebAPK Install Prompt */}
+      <InstallAppPrompt />
 
       {/* Controlled Layout & Style Switcher Bar (Triggered from Left Sidebar) */}
       <LayoutSwitcherBar
