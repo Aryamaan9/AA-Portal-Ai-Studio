@@ -12,7 +12,10 @@ const STORAGE_KEYS = {
 const DEFAULT_SETTINGS: AppSettings = {
   userName: 'Aryamaan',
   theme: 'grounded-sage',
-  layoutStructure: 'sidebar-left'
+  layoutStructure: 'sidebar-left',
+  geminiApiKey: import.meta.env.VITE_GEMINI_API_KEY || '',
+  providerConfigs: {},
+  providerKeys: {}
 };
 
 // 1. QUOTES

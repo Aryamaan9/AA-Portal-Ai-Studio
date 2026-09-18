@@ -10,6 +10,7 @@ import {
   Wind,
   Settings
 } from 'lucide-react';
+import styles from './FloatingIsland.module.css';
 
 export const FloatingIsland: React.FC = () => {
   const {
@@ -21,14 +22,14 @@ export const FloatingIsland: React.FC = () => {
   const { toggleTheme } = useTheme();
 
   return (
-    <nav className="sanctuary-floating-island-dock" aria-label="Sanctuary Island Dock">
-      <div className="island-brand-pill" onClick={() => setActiveTab('sanctuary')}>
+    <nav className={styles.floatingIslandDock} aria-label="Sanctuary Island Dock">
+      <div className={styles.brandPill} onClick={() => setActiveTab('sanctuary')}>
         <Sparkles size={16} color="var(--accent-gold)" />
       </div>
 
-      <div className="island-nav-items-row">
+      <div className={styles.navItemsRow}>
         <button
-          className={`island-tab-btn ${activeTab === 'sanctuary' ? 'active' : ''}`}
+          className={`${styles.tabBtn} ${activeTab === 'sanctuary' ? styles.active : ''}`}
           onClick={() => setActiveTab('sanctuary')}
         >
           <Compass size={15} />
@@ -36,7 +37,7 @@ export const FloatingIsland: React.FC = () => {
         </button>
 
         <button
-          className={`island-tab-btn ${activeTab === 'diary' ? 'active' : ''}`}
+          className={`${styles.tabBtn} ${activeTab === 'diary' ? styles.active : ''}`}
           onClick={() => setActiveTab('diary')}
         >
           <BookMarked size={15} />
@@ -44,7 +45,7 @@ export const FloatingIsland: React.FC = () => {
         </button>
 
         <button
-          className={`island-tab-btn ${activeTab === 'quotes' ? 'active' : ''}`}
+          className={`${styles.tabBtn} ${activeTab === 'quotes' ? styles.active : ''}`}
           onClick={() => setActiveTab('quotes')}
         >
           <BookOpen size={15} />
@@ -52,7 +53,7 @@ export const FloatingIsland: React.FC = () => {
         </button>
 
         <button
-          className={`island-tab-btn ${activeTab === 'companion' ? 'active' : ''}`}
+          className={`${styles.tabBtn} ${activeTab === 'companion' ? styles.active : ''}`}
           onClick={() => setActiveTab('companion')}
         >
           <MessageSquare size={15} />
@@ -60,9 +61,9 @@ export const FloatingIsland: React.FC = () => {
         </button>
       </div>
 
-      <div className="island-tools-cluster">
+      <div className={styles.toolsCluster}>
         <button
-          className="island-tool-btn"
+          className={styles.toolBtn}
           onClick={() => setIsBreathModalOpen(true)}
           title="Take a breath"
         >
@@ -70,7 +71,7 @@ export const FloatingIsland: React.FC = () => {
         </button>
 
         <button
-          className="island-tool-btn"
+          className={styles.toolBtn}
           onClick={toggleTheme}
           title="Toggle Light/Dark"
         >
@@ -78,7 +79,7 @@ export const FloatingIsland: React.FC = () => {
         </button>
 
         <button
-          className="island-tool-btn"
+          className={styles.toolBtn}
           onClick={() => setIsSettingsOpen(true)}
           title="Settings"
         >

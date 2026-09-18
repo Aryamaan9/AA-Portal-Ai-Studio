@@ -71,6 +71,7 @@ export interface FeelingReflection {
 
 export type LLMProviderType =
   | 'openrouter'
+  | 'kilo'
   | 'gemini'
   | 'openai'
   | 'deepseek'
@@ -79,6 +80,12 @@ export type LLMProviderType =
   | 'nvidia'
   | 'groq'
   | 'custom';
+
+export interface ProviderConfigRecord {
+  apiKey: string;
+  model?: string;
+  baseUrl?: string;
+}
 
 export interface AIProviderConfig {
   provider: LLMProviderType;
@@ -112,6 +119,8 @@ export interface AppSettings {
   supabaseUrl?: string;
   supabaseAnonKey?: string;
   aiConfig?: AIProviderConfig;
+  providerConfigs?: Partial<Record<LLMProviderType, ProviderConfigRecord>>;
+  providerKeys?: Partial<Record<LLMProviderType, string>>;
   geminiApiKey?: string;
   lastSync?: string;
 }

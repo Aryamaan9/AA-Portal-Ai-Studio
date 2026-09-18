@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useData } from '../../context/DataContext';
-import { X, Sparkles } from 'lucide-react';
+import { ResponsiveModal } from './ResponsiveModal';
 
 const BREATH_PHASES = [
   { text: 'Inhale gently', duration: 4, instruction: 'Breathe in slowly through your nose...' },
@@ -39,44 +39,35 @@ export const BreathModal: React.FC = () => {
   const currentPhase = BREATH_PHASES[phaseIndex];
 
   return (
-    <div className="modal-overlay" onClick={() => setIsBreathModalOpen(false)}>
-      <div className="modal-card" style={{ maxWidth: '460px' }} onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Sparkles size={16} color="var(--accent-gold)" />
-            <h2 className="modal-title" style={{ fontSize: '1.25rem' }}>
-              Nervous System Reset
-            </h2>
+    <ResponsiveModal
+      isOpen={isBreathModalOpen}
+      onClose={() => setIsBreathModalOpen(false)}
+      title="Nervous System Reset"
+      maxWidth="460px"
+    >
+      <div className="breath-modal-content">
+        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+          Slow 4-4-4-4 Box Breathing to down-regulate nervous system arousal and restore mental clarity.
+        </p>
+
+        <div className="breath-circle-wrapper">
+          <div className="breath-circle-outer" />
+          <div className="breath-circle-inner">
+            <span className="breath-instruction">{currentPhase.text}</span>
+            <span className="breath-seconds">{secondsRemaining}s</span>
           </div>
-          <button className="modal-close-btn" onClick={() => setIsBreathModalOpen(false)}>
-            <X size={16} />
+        </div>
+
+        <p style={{ fontStyle: 'italic', color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '1.5rem' }}>
+          "{currentPhase.instruction}"
+        </p>
+
+        <div style={{ marginTop: '2rem' }}>
+          <button className="btn-secondary" onClick={() => setIsBreathModalOpen(false)}>
+            Finished Grounding
           </button>
         </div>
-
-        <div className="breath-modal-content">
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-            Slow 4-4-4-4 Box Breathing to down-regulate nervous system arousal and restore mental clarity.
-          </p>
-
-          <div className="breath-circle-wrapper">
-            <div className="breath-circle-outer" />
-            <div className="breath-circle-inner">
-              <span className="breath-instruction">{currentPhase.text}</span>
-              <span className="breath-seconds">{secondsRemaining}s</span>
-            </div>
-          </div>
-
-          <p style={{ fontStyle: 'italic', color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '1.5rem' }}>
-            "{currentPhase.instruction}"
-          </p>
-
-          <div style={{ marginTop: '2rem' }}>
-            <button className="btn-secondary" onClick={() => setIsBreathModalOpen(false)}>
-              Finished Grounding
-            </button>
-          </div>
-        </div>
       </div>
-    </div>
+    </ResponsiveModal>
   );
 };

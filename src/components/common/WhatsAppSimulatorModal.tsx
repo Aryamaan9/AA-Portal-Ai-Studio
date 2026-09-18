@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useData } from '../../context/DataContext';
-import { MessageSquare, Send, Sparkles, X, CheckCircle, ArrowRight } from 'lucide-react';
+import { Send, Sparkles, CheckCircle, ArrowRight } from 'lucide-react';
+import { ResponsiveModal } from './ResponsiveModal';
 
 interface WhatsAppSimulatorModalProps {
   isOpen: boolean;
@@ -67,21 +68,8 @@ export const WhatsAppSimulatorModal: React.FC<WhatsAppSimulatorModalProps> = ({
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-card" style={{ maxWidth: '580px' }} onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <MessageSquare size={18} color="var(--accent-gold)" />
-            <h2 className="modal-title" style={{ fontSize: '1.25rem' }}>
-              WhatsApp Ingestion Simulator
-            </h2>
-          </div>
-          <button className="modal-close-btn" onClick={onClose}>
-            <X size={16} />
-          </button>
-        </div>
-
-        <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '1.25rem', lineHeight: 1.5 }}>
+    <ResponsiveModal isOpen={isOpen} onClose={onClose} title="WhatsApp Ingestion Simulator" maxWidth="580px">
+      <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '1.25rem', lineHeight: 1.5 }}>
           Test your natural language capture pipeline right now. Type any thought, quote, task, or feeling exactly as you would on WhatsApp:
         </p>
 
@@ -185,7 +173,6 @@ export const WhatsAppSimulatorModal: React.FC<WhatsAppSimulatorModalProps> = ({
             </div>
           </div>
         )}
-      </div>
-    </div>
+    </ResponsiveModal>
   );
 };

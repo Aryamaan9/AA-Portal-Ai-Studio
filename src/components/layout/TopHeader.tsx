@@ -12,6 +12,7 @@ import {
   Sun,
   Moon
 } from 'lucide-react';
+import styles from './TopHeader.module.css';
 
 export const TopHeader: React.FC = () => {
   const {
@@ -26,21 +27,21 @@ export const TopHeader: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="sanctuary-top-header-bar">
-      <div className="top-header-inner-wrap">
+    <header className={styles.topHeaderBar}>
+      <div className={styles.innerWrap}>
         {/* Brand */}
-        <div className="top-header-brand" onClick={() => setActiveTab('sanctuary')}>
-          <div className="brand-icon-box">
+        <div className={styles.brand} onClick={() => setActiveTab('sanctuary')}>
+          <div className={styles.brandIconBox}>
             <Sparkles size={16} color="var(--accent-gold)" />
           </div>
-          <span className="brand-main-name">Sanctuary</span>
-          <span className="brand-sub-badge">Aryamaan</span>
+          <span className={styles.brandMainName}>Sanctuary</span>
+          <span className={styles.brandSubBadge}>Aryamaan</span>
         </div>
 
         {/* Center Nav Links */}
-        <nav className="top-header-nav-menu">
+        <nav className={styles.navMenu}>
           <button
-            className={`top-nav-btn ${activeTab === 'sanctuary' ? 'active' : ''}`}
+            className={`${styles.navBtn} ${activeTab === 'sanctuary' ? styles.active : ''}`}
             onClick={() => setActiveTab('sanctuary')}
           >
             <Compass size={15} />
@@ -48,25 +49,25 @@ export const TopHeader: React.FC = () => {
           </button>
 
           <button
-            className={`top-nav-btn ${activeTab === 'diary' ? 'active' : ''}`}
+            className={`${styles.navBtn} ${activeTab === 'diary' ? styles.active : ''}`}
             onClick={() => setActiveTab('diary')}
           >
             <BookMarked size={15} />
             <span>Diary</span>
-            {diary.length > 0 && <span className="top-nav-badge">{diary.length}</span>}
+            {diary.length > 0 && <span className={styles.navBadge}>{diary.length}</span>}
           </button>
 
           <button
-            className={`top-nav-btn ${activeTab === 'quotes' ? 'active' : ''}`}
+            className={`${styles.navBtn} ${activeTab === 'quotes' ? styles.active : ''}`}
             onClick={() => setActiveTab('quotes')}
           >
             <BookOpen size={15} />
             <span>Wisdom Vault</span>
-            {quotes.length > 0 && <span className="top-nav-badge">{quotes.length}</span>}
+            {quotes.length > 0 && <span className={styles.navBadge}>{quotes.length}</span>}
           </button>
 
           <button
-            className={`top-nav-btn ${activeTab === 'companion' ? 'active' : ''}`}
+            className={`${styles.navBtn} ${activeTab === 'companion' ? styles.active : ''}`}
             onClick={() => setActiveTab('companion')}
           >
             <MessageSquare size={15} />
@@ -75,9 +76,9 @@ export const TopHeader: React.FC = () => {
         </nav>
 
         {/* Right Tools */}
-        <div className="top-header-tools-cluster">
+        <div className={styles.toolsCluster}>
           <button
-            className="header-tool-btn"
+            className={styles.toolBtn}
             onClick={() => setIsWhatsAppSimOpen(true)}
             title="WhatsApp Simulator"
           >
@@ -85,7 +86,7 @@ export const TopHeader: React.FC = () => {
           </button>
 
           <button
-            className="header-tool-btn"
+            className={styles.toolBtn}
             onClick={() => setIsBreathModalOpen(true)}
             title="Grounding Breath"
           >
@@ -93,7 +94,7 @@ export const TopHeader: React.FC = () => {
           </button>
 
           <button
-            className="header-tool-btn"
+            className={styles.toolBtn}
             onClick={toggleTheme}
             title={theme === 'dark-hearth' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
           >
@@ -101,7 +102,7 @@ export const TopHeader: React.FC = () => {
           </button>
 
           <button
-            className="header-tool-btn"
+            className={styles.toolBtn}
             onClick={() => setIsSettingsOpen(true)}
             title="Settings & BYOK Keys"
           >

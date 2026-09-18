@@ -13,6 +13,7 @@ import {
   Moon,
   Palette
 } from 'lucide-react';
+import styles from './SidebarNav.module.css';
 
 export const SidebarNav: React.FC<{ onOpenSwitcher?: () => void }> = ({ onOpenSwitcher }) => {
   const {
@@ -28,23 +29,23 @@ export const SidebarNav: React.FC<{ onOpenSwitcher?: () => void }> = ({ onOpenSw
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <aside className="sanctuary-sidebar-rail">
+    <aside className={styles.sidebarRail}>
       {/* Top Brand */}
       <div>
-        <div className="sidebar-brand-block" onClick={() => setActiveTab('sanctuary')}>
-          <div className="brand-icon-box">
+        <div className={styles.brandBlock} onClick={() => setActiveTab('sanctuary')}>
+          <div className={styles.brandIconBox}>
             <Sparkles size={18} color="var(--accent-gold)" />
           </div>
           <div>
-            <div className="brand-main-name">Sanctuary</div>
-            <div className="brand-sub-badge">Aryamaan</div>
+            <div className={styles.brandMainName}>Sanctuary</div>
+            <div className={styles.brandSubBadge}>Aryamaan</div>
           </div>
         </div>
 
         {/* Navigation Menu */}
-        <nav className="sidebar-nav-menu" aria-label="Desktop Navigation">
+        <nav className={styles.navMenu} aria-label="Desktop Navigation">
           <button
-            className={`sidebar-nav-btn ${activeTab === 'sanctuary' ? 'active' : ''}`}
+            className={`${styles.navBtn} ${activeTab === 'sanctuary' ? styles.active : ''}`}
             onClick={() => setActiveTab('sanctuary')}
           >
             <Compass size={17} />
@@ -52,36 +53,36 @@ export const SidebarNav: React.FC<{ onOpenSwitcher?: () => void }> = ({ onOpenSw
           </button>
 
           <button
-            className={`sidebar-nav-btn ${activeTab === 'diary' ? 'active' : ''}`}
+            className={`${styles.navBtn} ${activeTab === 'diary' ? styles.active : ''}`}
             onClick={() => setActiveTab('diary')}
           >
             <BookMarked size={17} />
             <span>Notebook Journal</span>
-            {diary.length > 0 && <span className="sidebar-badge-count">{diary.length}</span>}
+            {diary.length > 0 && <span className={styles.badgeCount}>{diary.length}</span>}
           </button>
 
           <button
-            className={`sidebar-nav-btn ${activeTab === 'quotes' ? 'active' : ''}`}
+            className={`${styles.navBtn} ${activeTab === 'quotes' ? styles.active : ''}`}
             onClick={() => setActiveTab('quotes')}
           >
             <BookOpen size={17} />
             <span>Wisdom Vault</span>
-            {quotes.length > 0 && <span className="sidebar-badge-count">{quotes.length}</span>}
+            {quotes.length > 0 && <span className={styles.badgeCount}>{quotes.length}</span>}
           </button>
 
           <button
-            className={`sidebar-nav-btn ${activeTab === 'companion' ? 'active' : ''}`}
+            className={`${styles.navBtn} ${activeTab === 'companion' ? styles.active : ''}`}
             onClick={() => setActiveTab('companion')}
           >
             <MessageSquare size={17} />
             <span>Companion</span>
-            <span className="sidebar-badge-ai">AI</span>
+            <span className={styles.badgeAi}>AI</span>
           </button>
 
           {/* Layouts & Styles menu item inside Left Sidebar */}
           {onOpenSwitcher && (
             <button
-              className="sidebar-nav-btn"
+              className={styles.navBtn}
               onClick={onOpenSwitcher}
               style={{ marginTop: '0.85rem', borderTop: '1px dashed var(--border-light)', paddingTop: '0.85rem' }}
             >
@@ -93,10 +94,10 @@ export const SidebarNav: React.FC<{ onOpenSwitcher?: () => void }> = ({ onOpenSw
       </div>
 
       {/* Sidebar Footer Tools */}
-      <div className="sidebar-footer-block">
-        <div className="sidebar-tools-row">
+      <div className={styles.footerBlock}>
+        <div className={styles.toolsRow}>
           <button
-            className="sidebar-tool-icon-btn"
+            className={styles.toolIconBtn}
             onClick={() => setIsWhatsAppSimOpen(true)}
             title="WhatsApp Simulator"
           >
@@ -104,7 +105,7 @@ export const SidebarNav: React.FC<{ onOpenSwitcher?: () => void }> = ({ onOpenSw
           </button>
 
           <button
-            className="sidebar-tool-icon-btn"
+            className={styles.toolIconBtn}
             onClick={() => setIsBreathModalOpen(true)}
             title="Grounding Breath"
           >
@@ -112,7 +113,7 @@ export const SidebarNav: React.FC<{ onOpenSwitcher?: () => void }> = ({ onOpenSw
           </button>
 
           <button
-            className="sidebar-tool-icon-btn"
+            className={styles.toolIconBtn}
             onClick={toggleTheme}
             title={theme === 'dark-hearth' ? 'Switch Light Theme' : 'Switch Dark Theme'}
           >
@@ -120,7 +121,7 @@ export const SidebarNav: React.FC<{ onOpenSwitcher?: () => void }> = ({ onOpenSw
           </button>
 
           <button
-            className="sidebar-tool-icon-btn"
+            className={styles.toolIconBtn}
             onClick={() => setIsSettingsOpen(true)}
             title="Settings & BYOK Keys"
           >

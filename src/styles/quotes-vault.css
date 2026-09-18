@@ -1,0 +1,471 @@
+/* --------------------------------------------------------------------------
+   4. WISDOM & QUOTES VAULT (5 UX READING MODES)
+   -------------------------------------------------------------------------- */
+.quotes-vault-view {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.vault-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1.25rem;
+}
+
+.vault-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.vault-main-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.vault-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.vault-stat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Fast Quote Capture Bar */
+.fast-quote-capture-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 0.85rem 1.25rem;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.fast-quote-capture-card:focus-within {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.capture-main-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.capture-main-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.capture-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.capture-expand-btn:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+.capture-submit-btn {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.82rem;
+}
+
+.capture-expanded-body {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  animation: slideDown 0.2s ease-out;
+}
+
+.capture-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.capture-sub-input {
+  padding: 0.5rem 0.75rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  color: var(--text-primary);
+}
+
+.capture-tag-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+/* 5 UX Reading Modes Switcher Bar */
+.vault-view-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  background-color: var(--bg-card);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.switcher-heading-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+}
+
+.view-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.view-toggle-btn:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+.view-toggle-btn.active {
+  background-color: var(--text-primary);
+  color: var(--bg-app);
+  font-weight: 600;
+}
+
+/* MODE 1: ZEN READER DECK */
+.zen-reader-deck-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.zen-deck-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.zen-deck-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.zen-deck-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.zen-deck-tags {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.zen-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.55rem;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-pill);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.zen-deck-meta-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.zen-deck-shuffle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.zen-deck-counter {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.zen-deck-progress-bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--border-light);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.zen-deck-progress-fill {
+  height: 100%;
+  background-color: var(--accent-gold);
+  transition: width 0.3s ease;
+}
+
+.zen-deck-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+  min-height: 420px;
+}
+
+.zen-carousel-nav-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.zen-carousel-nav-btn:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-app);
+  transform: scale(1.05);
+}
+
+.zen-focus-card {
+  flex: 1;
+  max-width: 720px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 3rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zen-watermark-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  color: var(--accent-soft);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.zen-quote-large-text {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.zen-author-line {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.zen-author-name {
+  font-weight: 600;
+}
+
+.zen-personal-note-box {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-surface);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: var(--radius-sm);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.zen-deck-actions-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.zen-actions-left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.zen-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.zen-action-btn:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+.zen-action-btn.is-active-pinned {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  background-color: var(--accent-soft);
+}
+
+.zen-action-btn.next-primary-btn {
+  background-color: var(--text-primary);
+  color: var(--bg-app);
+}
+
+.zen-deck-footer-hints {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.zen-hint-pill {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.zen-hint-pill kbd {
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  font-family: monospace;
+}
+
+/* MODE 2: LITERARY MANUSCRIPT */
+.manuscript-stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.manuscript-folio {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 2.5rem;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.manuscript-folio:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-medium);
+}
+
+/* Empty Vault Card */
+.empty-vault-card {
+  background-color: var(--bg-card);
+  border: 1px dashed var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.empty-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.empty-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 420px;
+}
+@media (max-width: 768px) {
+  /* Clean mobile adjustments for quotes */
+}

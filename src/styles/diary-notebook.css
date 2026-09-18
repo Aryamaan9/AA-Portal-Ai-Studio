@@ -1,0 +1,213 @@
+/* --------------------------------------------------------------------------
+   5. MOLESKINE NOTEBOOK JOURNAL (3-SECTION NOTES)
+   -------------------------------------------------------------------------- */
+.diary-notebook-view {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.moleskine-notebook-page {
+  background-color: #FAF8F3; /* Authentic warm ivory book paper */
+  border: 1px solid #D8D2C4;
+  border-radius: 4px 16px 16px 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 0 40px rgba(0, 0, 0, 0.02);
+  padding: 2.5rem 2rem 2rem 4.5rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Theme Dark Fallback for Moleskine */
+[data-theme="dark-hearth"] .moleskine-notebook-page,
+[data-theme="midnight-cobalt"] .moleskine-notebook-page {
+  background-color: var(--bg-card);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+.paper-gutter-shadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.04) 70%, transparent 100%);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+
+.paper-margin-red-line {
+  position: absolute;
+  left: 3.5rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(220, 38, 38, 0.22);
+  pointer-events: none;
+}
+
+.notebook-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #E5DFD1;
+  position: relative;
+  z-index: 2;
+}
+
+.notebook-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.notebook-page-num {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.paper-style-picker {
+  display: flex;
+  gap: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.04);
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+}
+
+.style-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.style-toggle-btn.active {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.paper-date-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+/* Ruled Lined Paper Textarea */
+.unified-paper-wrapper {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.unified-paper-textarea {
+  width: 100%;
+  flex: 1;
+  background: transparent;
+  border: none;
+  resize: none;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  color: var(--text-primary);
+  outline: none;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent calc(2.2rem - 1px),
+    rgba(160, 150, 130, 0.25) calc(2.2rem - 1px),
+    rgba(160, 150, 130, 0.25) 2.2rem
+  );
+  background-attachment: local;
+  padding-top: 0.3rem;
+  min-height: 380px;
+}
+
+.notebook-footer-bar {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.75rem;
+  border-top: 1px solid #E5DFD1;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-quiet-polish {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  background-color: rgba(30, 86, 69, 0.08);
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-quiet-polish:hover:not(:disabled) {
+  background-color: var(--accent-gold);
+  color: #FFFFFF;
+}
+
+.notebook-save-btn {
+  padding: 0.55rem 1.35rem;
+}
+
+/* Past Diary Entries List */
+.diary-search-bar {
+  width: 100%;
+  padding: 0.75rem 1.15rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .moleskine-notebook-page {
+    padding: 1.5rem 1.25rem 1.5rem 3rem;
+    min-height: 480px;
+  }
+  .paper-gutter-shadow {
+    width: 20px;
+  }
+  .paper-margin-red-line {
+    left: 2.25rem;
+  }
+  .unified-paper-textarea {
+    padding-left: 0.25rem;
+    font-size: 1.05rem;
+  }
+  .notebook-footer-actions {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}

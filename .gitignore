@@ -37,3 +37,12 @@ playwright/.cache/
 
 # Firebase
 .firebase/
+
+# Temporary scratch scripts and test artifacts
+mobile-*.png
+mobile-errors.json
+check-*.cjs
+check_*.cjs
+split-css.cjs
+take-mobile-screenshots.cjs
+

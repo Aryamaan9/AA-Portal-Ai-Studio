@@ -1,0 +1,114 @@
+/* --------------------------------------------------------------------------
+   8. VAULT CONTROLS, SEARCH BOX & MOOD PILLS
+   -------------------------------------------------------------------------- */
+.vault-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.vault-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 260px;
+}
+
+.vault-search-box .search-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.vault-search-input {
+  width: 100%;
+  padding: 0.65rem 1rem 0.65rem 2.5rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.vault-search-input:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+  outline: none;
+}
+
+.vault-tags-scroll-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.tag-pill-filter {
+  padding: 0.35rem 0.75rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.tag-pill-filter:hover {
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+
+.tag-pill-filter.active {
+  background-color: var(--accent-soft);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.mood-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.8rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mood-pill:hover {
+  background-color: var(--accent-soft);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+}
+
+@media (max-width: 768px) {
+  .sanctuary-preview-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-card {
+    padding: 1.5rem;
+  }
+  .chatgpt-clone-container {
+    height: calc(100vh - 6rem);
+  }
+  .chat-history-scroll {
+    padding: 1.5rem 1rem;
+  }
+  .chatgpt-input-dock {
+    padding: 1rem;
+  }
+}

@@ -1015,7 +1015,7 @@ test.describe('Aryamaan Sanctuary — 100+ Comprehensive E2E Test Suite', () => 
     const breathBtn = page.locator('.breath-trigger-pill');
     if (await breathBtn.isVisible()) {
       await breathBtn.click();
-      await expect(page.locator('.breath-modal-overlay')).toBeVisible();
+      await expect(page.locator('.breath-modal-content')).toBeVisible();
       await page.keyboard.press('Escape');
     }
   });
@@ -1024,7 +1024,7 @@ test.describe('Aryamaan Sanctuary — 100+ Comprehensive E2E Test Suite', () => 
     const breathBtn = page.locator('.breath-trigger-pill');
     if (await breathBtn.isVisible()) {
       await breathBtn.click();
-      await expect(page.locator('.breath-modal-overlay')).toBeVisible();
+      await expect(page.locator('.breath-modal-content')).toBeVisible();
       await page.keyboard.press('Escape');
     }
   });
@@ -1033,7 +1033,7 @@ test.describe('Aryamaan Sanctuary — 100+ Comprehensive E2E Test Suite', () => 
     const breathBtn = page.locator('.breath-trigger-pill');
     if (await breathBtn.isVisible()) {
       await breathBtn.click();
-      await expect(page.locator('.breath-modal-overlay')).toBeVisible();
+      await expect(page.locator('.breath-modal-content')).toBeVisible();
       await page.keyboard.press('Escape');
     }
   });
@@ -1042,7 +1042,7 @@ test.describe('Aryamaan Sanctuary — 100+ Comprehensive E2E Test Suite', () => 
     const breathBtn = page.locator('.breath-trigger-pill');
     if (await breathBtn.isVisible()) {
       await breathBtn.click();
-      await expect(page.locator('.breath-modal-overlay')).toBeVisible();
+      await expect(page.locator('.breath-modal-content')).toBeVisible();
       await page.keyboard.press('Escape');
     }
   });
@@ -1051,7 +1051,7 @@ test.describe('Aryamaan Sanctuary — 100+ Comprehensive E2E Test Suite', () => 
     const breathBtn = page.locator('.breath-trigger-pill');
     if (await breathBtn.isVisible()) {
       await breathBtn.click();
-      await expect(page.locator('.breath-modal-overlay')).toBeVisible();
+      await expect(page.locator('.breath-modal-content')).toBeVisible();
       await page.keyboard.press('Escape');
     }
   });
@@ -1060,7 +1060,7 @@ test.describe('Aryamaan Sanctuary — 100+ Comprehensive E2E Test Suite', () => 
     const breathBtn = page.locator('.breath-trigger-pill');
     if (await breathBtn.isVisible()) {
       await breathBtn.click();
-      await expect(page.locator('.breath-modal-overlay')).toBeVisible();
+      await expect(page.locator('.breath-modal-content')).toBeVisible();
       await page.keyboard.press('Escape');
     }
   });
@@ -1069,7 +1069,7 @@ test.describe('Aryamaan Sanctuary — 100+ Comprehensive E2E Test Suite', () => 
     const breathBtn = page.locator('.breath-trigger-pill');
     if (await breathBtn.isVisible()) {
       await breathBtn.click();
-      await expect(page.locator('.breath-modal-overlay')).toBeVisible();
+      await expect(page.locator('.breath-modal-content')).toBeVisible();
       await page.keyboard.press('Escape');
     }
   });
@@ -1078,7 +1078,7 @@ test.describe('Aryamaan Sanctuary — 100+ Comprehensive E2E Test Suite', () => 
     const breathBtn = page.locator('.breath-trigger-pill');
     if (await breathBtn.isVisible()) {
       await breathBtn.click();
-      await expect(page.locator('.breath-modal-overlay')).toBeVisible();
+      await expect(page.locator('.breath-modal-content')).toBeVisible();
       await page.keyboard.press('Escape');
     }
   });
@@ -1087,7 +1087,7 @@ test.describe('Aryamaan Sanctuary — 100+ Comprehensive E2E Test Suite', () => 
     const breathBtn = page.locator('.breath-trigger-pill');
     if (await breathBtn.isVisible()) {
       await breathBtn.click();
-      await expect(page.locator('.breath-modal-overlay')).toBeVisible();
+      await expect(page.locator('.breath-modal-content')).toBeVisible();
       await page.keyboard.press('Escape');
     }
   });
@@ -1096,7 +1096,7 @@ test.describe('Aryamaan Sanctuary — 100+ Comprehensive E2E Test Suite', () => 
     const breathBtn = page.locator('.breath-trigger-pill');
     if (await breathBtn.isVisible()) {
       await breathBtn.click();
-      await expect(page.locator('.breath-modal-overlay')).toBeVisible();
+      await expect(page.locator('.breath-modal-content')).toBeVisible();
       await page.keyboard.press('Escape');
     }
   });

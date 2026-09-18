@@ -1,0 +1,65 @@
+/* --------------------------------------------------------------------------
+   MISSING CLONE CARD OPTIONS
+   -------------------------------------------------------------------------- */
+.clone-card-options-box {
+  margin-top: 1rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.card-options-header {
+  margin-bottom: 0.25rem;
+}
+.option-pill-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.option-card-body p {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+.btn-extract-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  background-color: var(--accent-soft);
+  color: var(--accent-gold);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.btn-extract-pill:hover {
+  background-color: var(--accent-gold);
+  color: #FFFFFF;
+}
+.pill-add-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--bg-surface);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+.pill-add-btn:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+}

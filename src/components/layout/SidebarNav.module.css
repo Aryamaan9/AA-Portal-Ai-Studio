@@ -1,0 +1,142 @@
+.sidebarRail {
+  width: 240px;
+  min-width: 240px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-surface);
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  z-index: 40;
+}
+
+.brandBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.brandBlock:hover {
+  background-color: var(--bg-subtle);
+}
+
+.brandIconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandMainName {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.navBtn:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-subtle);
+}
+
+.active {
+  color: var(--accent-gold);
+  background-color: var(--accent-soft);
+  font-weight: 600;
+}
+
+.badgeCount {
+  margin-left: auto;
+  font-size: 0.72rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+}
+
+.badgeAi {
+  margin-left: auto;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--accent-soft);
+  color: var(--accent-gold);
+}
+
+.footerBlock {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.toolsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.toolIconBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.toolIconBtn:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .sidebarRail {
+    display: none !important;
+  }
+}
+
+.brandSubBadge {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}

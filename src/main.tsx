@@ -2,11 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
-import './sanctuary-design-system.css';
+import './styles/forms.css';
+import './styles/modals.css';
+import './styles/sanctuary-home.css';
+import './styles/quotes-vault.css';
+import './styles/diary-notebook.css';
+import './styles/companion-studio.css';
+import './styles/vault-controls.css';
+import './styles/install-banner.css';
+import './styles/missing-clone.css';
+import './styles/mobile-responsive.css';
+
+import '@mantine/core/styles.css';
+import { MantineProvider, createTheme } from '@mantine/core';
+
+const theme = createTheme({
+  primaryColor: 'teal',
+  fontFamily: 'Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif',
+  defaultRadius: 'md',
+});
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <MantineProvider theme={theme}>
+      <App />
+    </MantineProvider>
   </React.StrictMode>
 );
 

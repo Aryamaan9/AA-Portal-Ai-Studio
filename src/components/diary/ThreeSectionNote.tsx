@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useData } from '../../context/DataContext';
 import { refineRawDiaryThought } from '../../services/diaryService';
-import { Sparkles, Check, Bookmark, Feather, Lightbulb } from 'lucide-react';
+import { Sparkles, Check, Bookmark, Lightbulb } from 'lucide-react';
+import { SegmentedControl } from '@mantine/core';
 
 type NotebookSection = 'raw' | 'polished' | 'highlights';
 
@@ -79,51 +80,40 @@ export const ThreeSectionNote: React.FC<{ onSaved?: () => void }> = ({ onSaved }
       <div className="paper-margin-red-line" />
 
       {/* Notebook Header & 3-Section Nav */}
-      <div className="notebook-page-header">
-        <div className="notebook-header-left">
-          <span className="notebook-page-num">pg. {new Date().getDate()}</span>
+      <div className="notebook-page-header" style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginBottom: '1.75rem', paddingBottom: '1rem', borderBottom: '2px solid #E5DFD1' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+          <span className="notebook-page-num" style={{ fontFamily: 'var(--font-serif)', fontSize: '1.2rem', fontWeight: 600, color: 'var(--text-muted)' }}>
+            pg. {new Date().getDate()}
+          </span>
 
-          {/* 3 SECTIONS: Raw Stream | Polished Essence | Key Highlights */}
-          <div className="paper-style-picker">
-            <button
-              type="button"
-              className={`style-toggle-btn ${activeSection === 'raw' ? 'active' : ''}`}
-              onClick={() => setActiveSection('raw')}
-            >
-              <Feather size={12} style={{ marginRight: '0.2rem' }} />
-              Raw Stream
-            </button>
-
-            <button
-              type="button"
-              className={`style-toggle-btn ${activeSection === 'polished' ? 'active' : ''}`}
-              onClick={() => setActiveSection('polished')}
-            >
-              <Sparkles size={12} style={{ marginRight: '0.2rem' }} />
-              Polished Essence {refinedContent ? '✓' : ''}
-            </button>
-
-            <button
-              type="button"
-              className={`style-toggle-btn ${activeSection === 'highlights' ? 'active' : ''}`}
-              onClick={() => setActiveSection('highlights')}
-            >
-              <Lightbulb size={12} style={{ marginRight: '0.2rem' }} />
-              Key Highlights {learnings.length > 0 ? `(${learnings.length})` : ''}
-            </button>
+          <div className="paper-date-stamp" style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+            <Bookmark size={13} color="var(--accent-gold)" />
+            <time>
+              {new Date().toLocaleDateString(undefined, {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
+              })}
+            </time>
           </div>
         </div>
 
-        <div className="paper-date-stamp">
-          <Bookmark size={11} color="var(--accent-gold)" />
-          <time>
-            {new Date().toLocaleDateString(undefined, {
-              weekday: 'short',
-              month: 'short',
-              day: 'numeric',
-              year: 'numeric'
-            })}
-          </time>
+        {/* 3 SECTIONS: SegmentedControl */}
+        <div style={{ width: '100%', overflowX: 'auto' }}>
+          <SegmentedControl
+            size="xs"
+            radius="xl"
+            fullWidth
+            color="teal"
+            value={activeSection}
+            onChange={(val) => setActiveSection(val as NotebookSection)}
+            data={[
+              { label: 'Raw Stream', value: 'raw' },
+              { label: `Polished Essence ${refinedContent ? '✓' : ''}`, value: 'polished' },
+              { label: `Key Highlights ${learnings.length > 0 ? `(${learnings.length})` : ''}`, value: 'highlights' }
+            ]}
+          />
         </div>
       </div>
 

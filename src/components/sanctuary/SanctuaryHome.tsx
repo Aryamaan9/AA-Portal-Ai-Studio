@@ -18,6 +18,7 @@ import {
   Copy,
   Check
 } from 'lucide-react';
+import { Textarea, Button, Badge, Card, Text, Group, Stack } from '@mantine/core';
 
 const MOOD_CHECKIN_PILLS = [
   'Overwhelmed with decisions',
@@ -84,8 +85,8 @@ export const SanctuaryHome: React.FC = () => {
     if (!feelingInput.trim()) return;
     const text = feelingInput.trim();
     setFeelingInput('');
-    await sendCompanionMessage(text);
     setActiveTab('companion');
+    sendCompanionMessage(text);
   };
 
   const handleChipClick = (chip: string) => {
@@ -118,55 +119,64 @@ export const SanctuaryHome: React.FC = () => {
 
       {/* SECTION 1: DAILY ANCHOR QUOTE HERO CARD */}
       <section className="sanctuary-daily-anchor-card">
-        <div className="anchor-card-top-bar">
-          <div className="anchor-badge-group">
-            <span className="anchor-eyebrow-pill">
-              <Sparkles size={12} className="anchor-gold-icon" />
-              <span>Daily Anchor</span>
-            </span>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.25rem' }}>
+          <Group gap="xs" wrap="nowrap">
+            <Badge
+              variant="light"
+              color="yellow"
+              size="sm"
+              radius="xl"
+              leftSection={<Sparkles size={12} color="var(--accent-gold)" />}
+              styles={{ root: { textTransform: 'none', fontWeight: 600 } }}
+            >
+              Daily Anchor
+            </Badge>
             {currentAnchor.tags && currentAnchor.tags.length > 0 && (
-              <span className="anchor-tag-label">
+              <Badge variant="outline" color="gray" size="sm" radius="xl" styles={{ root: { textTransform: 'none' } }}>
                 #{currentAnchor.tags[0]}
-              </span>
+              </Badge>
             )}
-          </div>
+          </Group>
 
-          <div className="anchor-controls">
+          <Group gap="xs" wrap="nowrap">
             {availableAnchors.length > 1 && (
-              <button
-                type="button"
-                className="anchor-icon-btn"
+              <Button
+                variant="subtle"
+                color="gray"
+                size="xs"
+                radius="sm"
+                leftSection={<RefreshCw size={13} />}
                 onClick={handleNextAnchor}
                 title="Cycle to next anchor quote"
               >
-                <RefreshCw size={13} />
-                <span className="btn-label-desktop">Cycle</span>
-              </button>
+                Cycle
+              </Button>
             )}
 
-            <button
-              type="button"
-              className={`anchor-icon-btn ${currentAnchor.isPinned ? 'is-active-pinned' : ''}`}
+            <Button
+              variant={currentAnchor.isPinned ? 'light' : 'subtle'}
+              color={currentAnchor.isPinned ? 'yellow' : 'gray'}
+              size="xs"
+              radius="sm"
+              leftSection={<Bookmark size={13} fill={currentAnchor.isPinned ? 'var(--accent-gold)' : 'none'} />}
               onClick={() => togglePinQuote(currentAnchor.id)}
               title={currentAnchor.isPinned ? 'Unpin from Anchor' : 'Pin as Daily Anchor'}
             >
-              <Bookmark
-                size={13}
-                fill={currentAnchor.isPinned ? 'var(--accent-gold)' : 'none'}
-              />
-              <span className="btn-label-desktop">{currentAnchor.isPinned ? 'Anchored' : 'Pin'}</span>
-            </button>
+              {currentAnchor.isPinned ? 'Anchored' : 'Pin'}
+            </Button>
 
-            <button
-              type="button"
-              className="anchor-icon-btn highlight-action"
+            <Button
+              variant="light"
+              color="teal"
+              size="xs"
+              radius="sm"
+              leftSection={<Maximize2 size={13} />}
               onClick={() => setContemplatingQuote(currentAnchor)}
               title="Open full-screen contemplation space"
             >
-              <Maximize2 size={13} />
-              <span>Contemplate</span>
-            </button>
-          </div>
+              Contemplate
+            </Button>
+          </Group>
         </div>
 
         <div className="anchor-quote-content" onClick={() => setContemplatingQuote(currentAnchor)}>
@@ -185,71 +195,92 @@ export const SanctuaryHome: React.FC = () => {
 
       {/* SECTION 2: MIND MIRROR & GROUNDING COMPANION CARD */}
       <section className="home-mind-mirror-block">
-        <div className="mirror-header-row">
-          <div className="section-label-group">
-            <div className="mirror-icon-badge">
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.25rem' }}>
+          <Group gap="sm" wrap="nowrap" align="flex-start">
+            <div className="mirror-icon-badge" style={{ marginTop: '2px' }}>
               <Feather size={15} color="var(--accent-gold)" />
             </div>
             <div>
-              <h2 className="section-label-title">Mind Mirror & Grounding Companion</h2>
-              <p className="section-label-subtitle">Speak freely without filter. Whatever is alive, heavy, or in flux.</p>
+              <h2 className="section-label-title" style={{ margin: 0 }}>Mind Mirror & Grounding Companion</h2>
+              <p className="section-label-subtitle" style={{ margin: '2px 0 0 0' }}>Speak freely without filter. Whatever is alive, heavy, or in flux.</p>
             </div>
-          </div>
+          </Group>
 
-          <button
-            type="button"
-            className="breath-trigger-pill"
+          <Button
+            variant="outline"
+            color="teal"
+            size="xs"
+            radius="xl"
+            leftSection={<Wind size={13} />}
             onClick={() => setIsBreathModalOpen(true)}
             title="Take a 1-minute box breath"
           >
-            <span className="breath-pulse-dot" />
-            <Wind size={13} />
-            <span>Slow Exhale (4-4-4-4)</span>
-          </button>
+            Slow Exhale (4-4-4-4)
+          </Button>
         </div>
 
         <form onSubmit={handleReflectSubmit} className="mirror-input-form">
-          <div className="mirror-textarea-wrapper">
-            <textarea
-              className="mirror-home-textarea"
-              rows={4}
+          <div style={{ marginBottom: '1rem' }}>
+            <Textarea
               placeholder="What is occupying your mind right now? Speak unfiltered..."
               value={feelingInput}
               onChange={(e) => setFeelingInput(e.target.value)}
-              autoFocus
+              autosize
+              minRows={3}
+              maxRows={8}
+              size="md"
+              radius="md"
+              styles={{
+                input: {
+                  backgroundColor: 'var(--bg-card)',
+                  borderColor: 'var(--border-light)',
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: '1.05rem',
+                  lineHeight: 1.6,
+                }
+              }}
             />
             {feelingInput.trim().length > 0 && (
-              <div className="mirror-char-hint">
+              <Text size="xs" c="dimmed" ta="right" mt={4}>
                 {feelingInput.trim().length} chars
-              </div>
+              </Text>
             )}
           </div>
 
-          <div className="mirror-home-footer">
-            <div className="mirror-pills-wrap">
-              <span className="mirror-quick-label">Or ground into a state:</span>
-              <div className="mirror-chips-list">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+            <div>
+              <Text size="xs" fw={600} c="dimmed" mb={6} tt="uppercase" style={{ letterSpacing: '0.05em' }}>
+                Or ground into a state:
+              </Text>
+              <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', WebkitOverflowScrolling: 'touch', paddingBottom: '0.35rem' }} className="hide-scrollbar">
                 {MOOD_CHECKIN_PILLS.map((pill) => (
-                  <button
+                  <Badge
                     key={pill}
-                    type="button"
-                    className={`mood-prompt-chip ${feelingInput === pill ? 'is-selected' : ''}`}
+                    variant={feelingInput === pill ? 'filled' : 'outline'}
+                    color="teal"
+                    size="sm"
+                    radius="xl"
+                    style={{ cursor: 'pointer', textTransform: 'none', whiteSpace: 'nowrap', flexShrink: 0 }}
                     onClick={() => handleChipClick(pill)}
                   >
                     {pill}
-                  </button>
+                  </Badge>
                 ))}
               </div>
             </div>
 
-            <button
-              type="submit"
-              className="btn-primary mirror-submit-btn"
-              disabled={!feelingInput.trim()}
-            >
-              <span>Reflect & Ground</span>
-              <ArrowRight size={14} />
-            </button>
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <Button
+                type="submit"
+                color="teal"
+                size="sm"
+                radius="md"
+                disabled={!feelingInput.trim()}
+                rightSection={<ArrowRight size={14} />}
+              >
+                Reflect & Ground
+              </Button>
+            </div>
           </div>
         </form>
       </section>
@@ -257,27 +288,30 @@ export const SanctuaryHome: React.FC = () => {
       {/* SECTION 3: RECENT REFLECTIONS & VAULT WISDOM PREVIEW GRID */}
       <section className="sanctuary-preview-grid">
         {/* CARD A: RECENT NOTEBOOK JOURNAL ENTRY */}
-        <div className="preview-card journal-preview-card">
-          <div className="preview-card-header">
-            <div className="preview-header-title-group">
-              <BookMarked size={15} color="var(--accent-gold)" />
-              <span className="preview-card-title">Recent Journal Page</span>
-            </div>
+        <Card withBorder radius="md" shadow="xs" p="md" style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-light)' }}>
+          <Group justify="space-between" align="center" mb="sm">
+            <Group gap="xs">
+              <BookMarked size={16} color="var(--accent-gold)" />
+              <Text fw={600} size="sm">Recent Journal Page</Text>
+            </Group>
             {latestDiaryEntry && (
-              <span className="preview-date-badge">{latestDiaryEntry.date}</span>
+              <Badge variant="light" color="gray" size="xs">
+                {latestDiaryEntry.date}
+              </Badge>
             )}
-          </div>
+          </Group>
 
-          <div className="preview-card-body">
+          <div style={{ minHeight: '120px', cursor: 'pointer' }} onClick={() => setActiveTab('diary')}>
             {latestDiaryEntry ? (
-              <div className="preview-journal-content" onClick={() => setActiveTab('diary')}>
+              <Stack gap="xs">
                 {latestDiaryEntry.title && (
-                  <h3 className="preview-journal-heading">{latestDiaryEntry.title}</h3>
+                  <Text fw={700} size="md" style={{ fontFamily: 'var(--font-serif)' }}>
+                    {latestDiaryEntry.title}
+                  </Text>
                 )}
-                <p className="preview-journal-snippet">
-                  {latestDiaryEntry.rawContent.slice(0, 190)}
-                  {latestDiaryEntry.rawContent.length > 190 ? '...' : ''}
-                </p>
+                <Text size="sm" c="dimmed" lineClamp={3}>
+                  {latestDiaryEntry.rawContent}
+                </Text>
 
                 {latestDiaryEntry.refinedContent && (
                   <div className="preview-distilled-strip">
@@ -287,107 +321,108 @@ export const SanctuaryHome: React.FC = () => {
                 )}
 
                 {latestDiaryEntry.tags && latestDiaryEntry.tags.length > 0 && (
-                  <div className="preview-tags-row">
+                  <Group gap={4} mt={4}>
                     {latestDiaryEntry.tags.slice(0, 3).map((t) => (
-                      <span key={t} className="quote-tag-pill">#{t}</span>
+                      <Badge key={t} variant="outline" size="xs" color="teal">#{t}</Badge>
                     ))}
-                  </div>
+                  </Group>
                 )}
-              </div>
+              </Stack>
             ) : (
-              <div className="preview-empty-state" onClick={() => setActiveTab('diary')}>
-                <BookMarked size={28} className="empty-state-icon" />
-                <p className="empty-state-text">Your notebook is blank and awaiting today's reflections.</p>
-                <span className="empty-state-cta">Write first page →</span>
-              </div>
+              <Stack align="center" justify="center" gap="xs" py="md">
+                <BookMarked size={28} color="var(--text-muted)" />
+                <Text size="sm" c="dimmed" ta="center">Your notebook is blank and awaiting today's reflections.</Text>
+                <Text size="xs" fw={600} c="teal">Write first page →</Text>
+              </Stack>
             )}
           </div>
 
-          <div className="preview-card-footer">
-            <button
-              type="button"
-              className="preview-footer-action"
-              onClick={() => setActiveTab('diary')}
-            >
-              <span>Open Notebook Journal</span>
-              <ChevronRight size={14} />
-            </button>
-          </div>
-        </div>
+          <Button
+            variant="subtle"
+            color="teal"
+            fullWidth
+            mt="md"
+            rightSection={<ChevronRight size={14} />}
+            onClick={() => setActiveTab('diary')}
+            styles={{ root: { borderTop: '1px solid var(--border-light)', paddingTop: '0.75rem', height: 'auto' } }}
+          >
+            Open Notebook Journal
+          </Button>
+        </Card>
 
         {/* CARD B: WISDOM VAULT HIGHLIGHT */}
-        <div className="preview-card wisdom-preview-card">
-          <div className="preview-card-header">
-            <div className="preview-header-title-group">
-              <BookOpen size={15} color="var(--accent-gold)" />
-              <span className="preview-card-title">Vault Wisdom Highlight</span>
-            </div>
+        <Card withBorder radius="md" shadow="xs" p="md" style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-light)' }}>
+          <Group justify="space-between" align="center" mb="sm">
+            <Group gap="xs">
+              <BookOpen size={16} color="var(--accent-gold)" />
+              <Text fw={600} size="sm">Vault Wisdom Highlight</Text>
+            </Group>
             {highlightQuote && highlightQuote.tags && highlightQuote.tags.length > 0 && (
-              <span className="preview-tag-pill">
-                <Tag size={10} />
-                <span>{highlightQuote.tags[0]}</span>
-              </span>
+              <Badge variant="light" color="yellow" size="xs" leftSection={<Tag size={10} />}>
+                {highlightQuote.tags[0]}
+              </Badge>
             )}
-          </div>
+          </Group>
 
-          <div className="preview-card-body">
+          <div style={{ minHeight: '120px' }}>
             {highlightQuote ? (
-              <div className="preview-quote-content">
+              <Stack gap="xs">
                 <blockquote
                   className="preview-quote-text"
+                  style={{ cursor: 'pointer', margin: 0 }}
                   onClick={() => setContemplatingQuote(highlightQuote)}
                 >
                   "{highlightQuote.text}"
                 </blockquote>
-                <div className="preview-author-row">
-                  <span className="preview-author-name">— {highlightQuote.author || 'Internal Wisdom'}</span>
+                <Group gap="xs">
+                  <Text size="xs" fw={600} c="dimmed">— {highlightQuote.author || 'Internal Wisdom'}</Text>
                   {highlightQuote.source && (
-                    <span className="preview-source-sub">({highlightQuote.source})</span>
+                    <Text size="xs" c="dimmed">({highlightQuote.source})</Text>
                   )}
-                </div>
+                </Group>
 
-                <div className="preview-quick-actions-bar">
-                  <button
-                    type="button"
-                    className="card-action-btn"
+                <Group gap="xs" mt="xs">
+                  <Button
+                    variant="subtle"
+                    color="gray"
+                    size="xs"
+                    leftSection={copiedQuoteId === highlightQuote.id ? <Check size={12} color="var(--accent-gold)" /> : <Copy size={12} />}
                     onClick={(e) => handleCopyQuote(e, highlightQuote)}
-                    title="Copy quote"
                   >
-                    {copiedQuoteId === highlightQuote.id ? <Check size={12} color="var(--accent-gold)" /> : <Copy size={12} />}
-                    <span>{copiedQuoteId === highlightQuote.id ? 'Copied' : 'Copy'}</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    className="card-action-btn"
+                    {copiedQuoteId === highlightQuote.id ? 'Copied' : 'Copy'}
+                  </Button>
+                  <Button
+                    variant="subtle"
+                    color="teal"
+                    size="xs"
+                    leftSection={<Maximize2 size={12} />}
                     onClick={() => setContemplatingQuote(highlightQuote)}
-                    title="Contemplate quote"
                   >
-                    <Maximize2 size={12} />
-                    <span>Contemplate</span>
-                  </button>
-                </div>
-              </div>
+                    Contemplate
+                  </Button>
+                </Group>
+              </Stack>
             ) : (
-              <div className="preview-empty-state" onClick={() => setActiveTab('quotes')}>
-                <BookOpen size={28} className="empty-state-icon" />
-                <p className="empty-state-text">Your wisdom vault is ready to store timeless quotes.</p>
-                <span className="empty-state-cta">Add a quote →</span>
-              </div>
+              <Stack align="center" justify="center" gap="xs" py="md">
+                <BookOpen size={28} color="var(--text-muted)" />
+                <Text size="sm" c="dimmed" ta="center">Your wisdom vault is ready to store timeless quotes.</Text>
+                <Text size="xs" fw={600} c="teal" style={{ cursor: 'pointer' }} onClick={() => setActiveTab('quotes')}>Add a quote →</Text>
+              </Stack>
             )}
           </div>
 
-          <div className="preview-card-footer">
-            <button
-              type="button"
-              className="preview-footer-action"
-              onClick={() => setActiveTab('quotes')}
-            >
-              <span>Explore Vault ({quotes.length})</span>
-              <ChevronRight size={14} />
-            </button>
-          </div>
-        </div>
+          <Button
+            variant="subtle"
+            color="teal"
+            fullWidth
+            mt="md"
+            rightSection={<ChevronRight size={14} />}
+            onClick={() => setActiveTab('quotes')}
+            styles={{ root: { borderTop: '1px solid var(--border-light)', paddingTop: '0.75rem', height: 'auto' } }}
+          >
+            Explore Vault ({quotes.length})
+          </Button>
+        </Card>
       </section>
     </div>
   );

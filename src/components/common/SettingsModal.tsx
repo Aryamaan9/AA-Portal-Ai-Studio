@@ -4,18 +4,26 @@ import { exportSanctuaryData, importSanctuaryData } from '../../services/storage
 import { LLMProviderType, AIProviderConfig } from '../../types';
 import { PROVIDER_PRESETS, callUniversalLLM } from '../../services/llm';
 import {
-  X,
   Download,
   Upload,
   ShieldCheck,
-  Cpu,
-  Database,
-  User,
   ExternalLink,
   CheckCircle,
   AlertCircle,
   Smartphone
 } from 'lucide-react';
+import {
+  SegmentedControl,
+  TextInput,
+  PasswordInput,
+  Button,
+  Badge,
+  Card,
+  Group,
+  Text,
+  Anchor
+} from '@mantine/core';
+import { ResponsiveModal } from './ResponsiveModal';
 
 export const SettingsModal: React.FC = () => {
   const { isSettingsOpen, setIsSettingsOpen, settings, updateSettings, refreshData, showToast } = useData();
@@ -30,16 +38,64 @@ export const SettingsModal: React.FC = () => {
   const [supabaseUrl, setSupabaseUrl] = useState(settings.supabaseUrl || '');
   const [supabaseAnonKey, setSupabaseAnonKey] = useState(settings.supabaseAnonKey || '');
 
-  // AI & BYOK State
+  // AI & BYOK State - Multi-Key & Provider Configuration
+  const allProviders: LLMProviderType[] = [
+    'openrouter',
+    'kilo',
+    'gemini',
+    'deepseek',
+    'groq',
+    'openai',
+    'moonshot',
+    'zhipu',
+    'nvidia',
+    'custom'
+  ];
+
   const initialProvider: LLMProviderType = settings.aiConfig?.provider || 'openrouter';
-  const [provider, setProvider] = useState<LLMProviderType>(initialProvider);
-  const [apiKey, setApiKey] = useState(settings.aiConfig?.apiKey || settings.geminiApiKey || '');
-  const [model, setModel] = useState(
-    settings.aiConfig?.model || PROVIDER_PRESETS[initialProvider].defaultModel
-  );
-  const [baseUrl, setBaseUrl] = useState(
-    settings.aiConfig?.baseUrl || PROVIDER_PRESETS[initialProvider].defaultBaseUrl
-  );
+  const [activeProvider, setActiveProvider] = useState<LLMProviderType>(initialProvider);
+
+  const [providerConfigs, setProviderConfigs] = useState<
+    Record<LLMProviderType, { apiKey: string; model: string; baseUrl: string }>
+  >(() => {
+    const initial: Record<LLMProviderType, { apiKey: string; model: string; baseUrl: string }> = {} as any;
+    allProviders.forEach((p) => {
+      const preset = PROVIDER_PRESETS[p];
+      const savedConfig = settings.providerConfigs?.[p];
+      const savedKey =
+        savedConfig?.apiKey ||
+        settings.providerKeys?.[p] ||
+        (settings.aiConfig?.provider === p ? settings.aiConfig.apiKey : '') ||
+        (p === 'gemini' ? (settings.geminiApiKey || '') : '');
+      let savedModel =
+        savedConfig?.model ||
+        (settings.aiConfig?.provider === p ? settings.aiConfig.model : '') ||
+        preset.defaultModel;
+
+      // Automatically migrate any obsolete or incompatible gemini-2.5 model strings to gemini-2.0-flash
+      if (p === 'gemini' && (savedModel.startsWith('gemini-2.5') || !savedModel)) {
+        savedModel = 'gemini-2.0-flash';
+      }
+      if (p === 'openrouter' && savedModel === 'google/gemini-2.5-flash') {
+        savedModel = 'google/gemini-2.0-flash-001';
+      }
+      if (p === 'kilo' && savedModel === 'google/gemini-2.5-flash') {
+        savedModel = 'google/gemini-2.0-flash';
+      }
+
+      const savedBaseUrl =
+        savedConfig?.baseUrl ||
+        (settings.aiConfig?.provider === p ? settings.aiConfig.baseUrl : '') ||
+        preset.defaultBaseUrl;
+
+      initial[p] = {
+        apiKey: savedKey,
+        model: savedModel,
+        baseUrl: savedBaseUrl
+      };
+    });
+    return initial;
+  });
 
   // Test Connection status
   const [isTesting, setIsTesting] = useState(false);
@@ -62,31 +118,51 @@ export const SettingsModal: React.FC = () => {
     return () => window.removeEventListener('beforeinstallprompt', handler);
   }, []);
 
-  const currentPreset = PROVIDER_PRESETS[provider];
+  const currentPreset = PROVIDER_PRESETS[activeProvider] || PROVIDER_PRESETS.openrouter;
+  const currentConfig = providerConfigs[activeProvider] || {
+    apiKey: '',
+    model: currentPreset.defaultModel,
+    baseUrl: currentPreset.defaultBaseUrl
+  };
 
-  const handleProviderChange = (newProvider: LLMProviderType) => {
-    setProvider(newProvider);
-    const preset = PROVIDER_PRESETS[newProvider];
-    setModel(preset.defaultModel);
-    setBaseUrl(preset.defaultBaseUrl);
+  const handleProviderSelect = (newProvider: LLMProviderType) => {
+    setActiveProvider(newProvider);
+    setTestResult(null);
+  };
+
+  const updateActiveField = (field: 'apiKey' | 'model' | 'baseUrl', value: string) => {
+    setProviderConfigs((prev) => ({
+      ...prev,
+      [activeProvider]: {
+        ...prev[activeProvider],
+        [field]: value
+      }
+    }));
     setTestResult(null);
   };
 
   const handleTestConnection = async () => {
-    if (!apiKey.trim()) {
-      setTestResult({ success: false, message: 'Please enter an API Key first' });
+    if (!currentConfig.apiKey.trim()) {
+      setTestResult({ success: false, message: `Please enter an API Key for ${currentPreset.name} first.` });
       return;
     }
 
     setIsTesting(true);
     setTestResult(null);
 
+    const rawModel = currentConfig.model.trim() || currentPreset.defaultModel;
+    let effectiveModel = rawModel;
+    if (activeProvider === 'gemini' && (effectiveModel.startsWith('gemini-2.5') || !effectiveModel)) {
+      effectiveModel = 'gemini-2.0-flash';
+      updateActiveField('model', effectiveModel);
+    }
+
     try {
       const config: AIProviderConfig = {
-        provider,
-        apiKey: apiKey.trim(),
-        model: model.trim(),
-        baseUrl: baseUrl.trim() || undefined
+        provider: activeProvider,
+        apiKey: currentConfig.apiKey.trim(),
+        model: effectiveModel,
+        baseUrl: currentConfig.baseUrl.trim() || undefined
       };
 
       const reply = await callUniversalLLM(config, [
@@ -97,7 +173,7 @@ export const SettingsModal: React.FC = () => {
       if (reply) {
         setTestResult({
           success: true,
-          message: `Connected successfully to ${currentPreset.name} (${model})!`
+          message: `Connected successfully to ${currentPreset.name} (${config.model})!`
         });
       }
     } catch (err: any) {
@@ -113,21 +189,49 @@ export const SettingsModal: React.FC = () => {
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const aiConfig: AIProviderConfig | undefined = apiKey.trim()
-      ? {
-          provider,
-          apiKey: apiKey.trim(),
-          model: model.trim() || currentPreset.defaultModel,
-          baseUrl: baseUrl.trim() || undefined
+    const savedConfigs: Partial<Record<LLMProviderType, { apiKey: string; model: string; baseUrl: string }>> = {};
+    const savedKeys: Partial<Record<LLMProviderType, string>> = {};
+
+    allProviders.forEach((p) => {
+      const item = providerConfigs[p];
+      if (item && item.apiKey.trim()) {
+        let model = item.model.trim() || PROVIDER_PRESETS[p].defaultModel;
+        if (p === 'gemini' && (model.startsWith('gemini-2.5') || !model)) {
+          model = 'gemini-2.0-flash';
         }
-      : undefined;
+        savedKeys[p] = item.apiKey.trim();
+        savedConfigs[p] = {
+          apiKey: item.apiKey.trim(),
+          model,
+          baseUrl: item.baseUrl.trim() || PROVIDER_PRESETS[p].defaultBaseUrl
+        };
+      }
+    });
+
+    const activeItem = providerConfigs[activeProvider];
+    let effectiveActiveModel = activeItem?.model?.trim() || currentPreset.defaultModel;
+    if (activeProvider === 'gemini' && (effectiveActiveModel.startsWith('gemini-2.5') || !effectiveActiveModel)) {
+      effectiveActiveModel = 'gemini-2.0-flash';
+    }
+
+    const aiConfig: AIProviderConfig | undefined =
+      activeItem && activeItem.apiKey.trim()
+        ? {
+            provider: activeProvider,
+            apiKey: activeItem.apiKey.trim(),
+            model: effectiveActiveModel,
+            baseUrl: activeItem.baseUrl.trim() || undefined
+          }
+        : undefined;
 
     updateSettings({
       userName: userName.trim() || 'Aryamaan',
       supabaseUrl: supabaseUrl.trim() || undefined,
       supabaseAnonKey: supabaseAnonKey.trim() || undefined,
       aiConfig,
-      geminiApiKey: provider === 'gemini' ? apiKey.trim() : settings.geminiApiKey
+      providerConfigs: savedConfigs,
+      providerKeys: savedKeys,
+      geminiApiKey: providerConfigs.gemini?.apiKey.trim() || settings.geminiApiKey
     });
     setIsSettingsOpen(false);
   };
@@ -183,169 +287,202 @@ export const SettingsModal: React.FC = () => {
   if (!isSettingsOpen) return null;
 
   return (
-    <div className="modal-overlay" onClick={() => setIsSettingsOpen(false)}>
-      <div className="modal-card" style={{ maxWidth: '620px' }} onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
-          <h2 className="modal-title">Sanctuary Settings</h2>
-          <button className="modal-close-btn" onClick={() => setIsSettingsOpen(false)}>
-            <X size={16} />
-          </button>
-        </div>
-
-        {/* Settings Navigation Tabs */}
-        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-light)', paddingBottom: '0.75rem' }}>
-          <button
-            type="button"
-            className={`nav-link-btn ${activeTab === 'ai' ? 'active' : ''}`}
-            onClick={() => setActiveTab('ai')}
-          >
-            <Cpu size={15} />
-            <span>AI Models & BYOK</span>
-          </button>
-          <button
-            type="button"
-            className={`nav-link-btn ${activeTab === 'general' ? 'active' : ''}`}
-            onClick={() => setActiveTab('general')}
-          >
-            <User size={15} />
-            <span>Profile & Backup</span>
-          </button>
-          <button
-            type="button"
-            className={`nav-link-btn ${activeTab === 'cloud' ? 'active' : ''}`}
-            onClick={() => setActiveTab('cloud')}
-          >
-            <Database size={15} />
-            <span>Cloud Sync</span>
-          </button>
-        </div>
+    <ResponsiveModal isOpen={isSettingsOpen} onClose={() => setIsSettingsOpen(false)} title="Sanctuary Settings">
+        <SegmentedControl
+          value={activeTab}
+          onChange={(val) => setActiveTab(val as any)}
+          fullWidth
+          size="sm"
+          radius="md"
+          color="teal"
+          mb="lg"
+          data={[
+            { label: 'AI Models & BYOK', value: 'ai' },
+            { label: 'Profile & Backup', value: 'general' },
+            { label: 'Cloud Sync', value: 'cloud' }
+          ]}
+        />
 
         <form onSubmit={handleSave}>
           {/* TAB 1: AI MODELS & BYOK */}
           {activeTab === 'ai' && (
             <div>
               <div style={{ marginBottom: '1.25rem' }}>
-                <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
-                  Bring Your Own Key (BYOK) for live empathetic reflections, Socratic inquiry, and thought parsing. Supports OpenRouter (200+ models), DeepSeek, Kimi, GLM, NVIDIA NIM, Gemini, Groq, OpenAI, and custom endpoints.
-                </p>
+                <Text size="sm" c="dimmed" lh={1.5}>
+                  Bring Your Own Key (BYOK) for live reflections, vision parsing, and screenshot extraction.
+                  Keys are preserved securely in your local browser.
+                </Text>
               </div>
 
-              {/* Provider Selector */}
-              <div className="form-group">
-                <label className="form-label">AI Provider</label>
-                <select
-                  className="form-input"
-                  value={provider}
-                  onChange={(e) => handleProviderChange(e.target.value as LLMProviderType)}
-                  style={{ cursor: 'pointer', background: 'var(--bg-subtle)' }}
-                >
-                  <option value="openrouter">OpenRouter (Recommended: 200+ Models in 1 key)</option>
-                  <option value="deepseek">DeepSeek Official (deepseek-chat / deepseek-reasoner)</option>
-                  <option value="moonshot">Moonshot AI / Kimi (moonshot-v1-auto)</option>
-                  <option value="zhipu">Zhipu AI / GLM (glm-4-plus / glm-4-flash)</option>
-                  <option value="nvidia">NVIDIA NIM (build.nvidia.com)</option>
-                  <option value="gemini">Google Gemini (Gemini 1.5 / 2.0 Flash)</option>
-                  <option value="groq">Groq (Ultra-Fast Llama 3.3)</option>
-                  <option value="openai">OpenAI (GPT-4o / o1 / o3-mini)</option>
-                  <option value="custom">Custom / Kilocode / Local Ollama</option>
-                </select>
+              {/* Provider Selection */}
+              <div style={{ marginBottom: '1.25rem' }}>
+                <Text size="xs" fw={600} mb={6} c="var(--text-primary)">
+                  Select Active AI Provider
+                </Text>
+                <SegmentedControl
+                  value={['gemini', 'openrouter', 'kilo'].includes(activeProvider) ? activeProvider : 'more'}
+                  onChange={(val) => {
+                    if (val !== 'more') {
+                      handleProviderSelect(val as LLMProviderType);
+                    }
+                  }}
+                  fullWidth
+                  size="xs"
+                  radius="md"
+                  color="teal"
+                  data={[
+                    { label: 'Google Gemini', value: 'gemini' },
+                    { label: 'OpenRouter', value: 'openrouter' },
+                    { label: 'Kilo Gateway', value: 'kilo' },
+                    { label: 'Other...', value: 'more' }
+                  ]}
+                />
               </div>
 
-              {/* API Key */}
-              <div className="form-group">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.3rem' }}>
-                  <label className="form-label" style={{ marginBottom: 0 }}>
-                    API Key
-                  </label>
-                  <a
+              {/* More Providers Dropdown (Only shown if 'more' or custom active) */}
+              {(!['gemini', 'openrouter', 'kilo'].includes(activeProvider) || activeProvider === 'custom') && (
+                <div className="form-group" style={{ marginBottom: '1rem' }}>
+                  <label className="form-label">All Available Providers</label>
+                  <select
+                    className="form-input"
+                    value={activeProvider}
+                    onChange={(e) => handleProviderSelect(e.target.value as LLMProviderType)}
+                    style={{ cursor: 'pointer', background: 'var(--bg-subtle)' }}
+                  >
+                    <option value="gemini">Google Gemini (Gemini 2.0 / 1.5 Flash)</option>
+                    <option value="openrouter">OpenRouter (200+ Models)</option>
+                    <option value="kilo">Kilo Gateway (500+ Models)</option>
+                    <option value="deepseek">DeepSeek Official</option>
+                    <option value="groq">Groq (Ultra-Fast Llama 3.3)</option>
+                    <option value="openai">OpenAI (GPT-4o / o1 / o3-mini)</option>
+                    <option value="moonshot">Moonshot AI / Kimi</option>
+                    <option value="zhipu">Zhipu AI / GLM</option>
+                    <option value="nvidia">NVIDIA NIM</option>
+                    <option value="custom">Custom / Local Ollama</option>
+                  </select>
+                </div>
+              )}
+              {/* Active Provider Configuration Card */}
+              <Card withBorder radius="md" p="md" mb="md" style={{ background: 'var(--bg-surface)', borderColor: 'var(--border-light)' }}>
+                <Group justify="space-between" align="center" mb="xs">
+                  <Group gap="xs">
+                    <Text fw={600} size="sm" c="var(--text-primary)">
+                      {currentPreset.name}
+                    </Text>
+                    <Badge color="teal" variant="light" size="sm">
+                      Active Model
+                    </Badge>
+                  </Group>
+                  <Anchor
                     href={currentPreset.docsUrl}
                     target="_blank"
-                    rel="noreferrer"
-                    style={{ fontSize: '0.75rem', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', gap: '0.25rem', textDecoration: 'none' }}
+                    size="xs"
+                    c="teal"
+                    style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}
                   >
                     <span>Get Key</span>
                     <ExternalLink size={11} />
-                  </a>
-                </div>
-                <input
-                  type="password"
-                  className="form-input"
-                  placeholder={currentPreset.placeholderKey}
-                  value={apiKey}
-                  onChange={(e) => {
-                    setApiKey(e.target.value);
-                    setTestResult(null);
-                  }}
-                />
-              </div>
+                  </Anchor>
+                </Group>
 
-              {/* Model ID & Suggestions */}
-              <div className="form-group">
-                <label className="form-label">Model ID</label>
-                <input
-                  type="text"
-                  className="form-input"
-                  placeholder={currentPreset.defaultModel}
-                  value={model}
-                  onChange={(e) => setModel(e.target.value)}
-                  style={{ marginBottom: '0.4rem' }}
-                />
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.3rem' }}>
-                  {currentPreset.modelSuggestions.map((m) => (
-                    <button
-                      key={m}
-                      type="button"
-                      className={`tag-filter-chip ${model === m ? 'active' : ''}`}
-                      style={{ fontSize: '0.72rem', padding: '0.15rem 0.5rem' }}
-                      onClick={() => setModel(m)}
-                    >
-                      {m}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Custom Base URL (if custom or needed) */}
-              {(provider === 'custom' || provider === 'openrouter' || provider === 'nvidia') && (
-                <div className="form-group" style={{ marginTop: '1rem' }}>
-                  <label className="form-label">API Base URL</label>
-                  <input
-                    type="text"
-                    className="form-input"
-                    placeholder={currentPreset.defaultBaseUrl}
-                    value={baseUrl}
-                    onChange={(e) => setBaseUrl(e.target.value)}
-                  />
-                </div>
-              )}
-
-              {/* Test Connection Button & Status */}
-              <div style={{ marginTop: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <button
-                  type="button"
-                  className="btn-secondary"
-                  onClick={handleTestConnection}
-                  disabled={isTesting || !apiKey.trim()}
-                  style={{ fontSize: '0.8rem', padding: '0.45rem 1rem' }}
-                >
-                  {isTesting ? 'Testing connection...' : 'Test Connection'}
-                </button>
-
-                {testResult && (
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.4rem',
-                      fontSize: '0.8rem',
-                      color: testResult.success ? '#2e7d32' : '#c62828'
+                {/* API Key */}
+                <div style={{ marginTop: '0.5rem', marginBottom: '0.75rem' }}>
+                  <PasswordInput
+                    label="API Key"
+                    description={
+                      activeProvider === 'gemini'
+                        ? 'Paste your free Google AI Studio key (starts with AIzaSy...). Preserved privately in your browser.'
+                        : 'Private in your browser. Switching providers will not erase this key.'
+                    }
+                    placeholder={currentPreset.placeholderKey}
+                    value={currentConfig.apiKey}
+                    onChange={(e) => updateActiveField('apiKey', e.target.value)}
+                    size="sm"
+                    radius="md"
+                    styles={{
+                      input: {
+                        borderColor: currentConfig.apiKey.trim() ? 'var(--accent-gold)' : undefined,
+                      }
                     }}
-                  >
-                    {testResult.success ? <CheckCircle size={15} /> : <AlertCircle size={15} />}
-                    <span>{testResult.message}</span>
+                  />
+                  {currentConfig.apiKey.trim() && (
+                    <Text size="xs" c="teal" fw={600} mt={4}>
+                      ✓ Key Saved for {currentPreset.id}
+                    </Text>
+                  )}
+                </div>
+
+                {/* Model ID & Suggestions */}
+                <div style={{ marginBottom: '0.75rem' }}>
+                  <TextInput
+                    label="Model ID"
+                    placeholder={currentPreset.defaultModel}
+                    value={currentConfig.model}
+                    onChange={(e) => updateActiveField('model', e.target.value)}
+                    size="sm"
+                    radius="md"
+                    mb={6}
+                  />
+                  <Group gap={6}>
+                    {currentPreset.modelSuggestions.map((m) => (
+                      <Badge
+                        key={m}
+                        variant={currentConfig.model === m ? 'filled' : 'outline'}
+                        color="teal"
+                        size="xs"
+                        style={{ cursor: 'pointer' }}
+                        onClick={() => updateActiveField('model', m)}
+                      >
+                        {m}
+                      </Badge>
+                    ))}
+                  </Group>
+                </div>
+
+                {/* Custom Base URL (if custom, openrouter, kilo, or nvidia) */}
+                {(activeProvider === 'custom' ||
+                  activeProvider === 'openrouter' ||
+                  activeProvider === 'kilo' ||
+                  activeProvider === 'nvidia') && (
+                  <div style={{ marginBottom: '0.75rem' }}>
+                    <TextInput
+                      label="API Base URL"
+                      placeholder={currentPreset.defaultBaseUrl}
+                      value={currentConfig.baseUrl}
+                      onChange={(e) => updateActiveField('baseUrl', e.target.value)}
+                      size="sm"
+                      radius="md"
+                    />
                   </div>
                 )}
-              </div>
+
+                {/* Test Connection Button & Status */}
+                <Group mt="md" align="center" gap="sm">
+                  <Button
+                    variant="light"
+                    color="teal"
+                    size="xs"
+                    onClick={handleTestConnection}
+                    loading={isTesting}
+                    disabled={!currentConfig.apiKey.trim()}
+                  >
+                    {isTesting ? 'Testing connection...' : `Test ${currentPreset.name}`}
+                  </Button>
+
+                  {testResult && (
+                    <Group gap={4}>
+                      {testResult.success ? (
+                        <CheckCircle size={15} color="#2e7d32" />
+                      ) : (
+                        <AlertCircle size={15} color="#c62828" />
+                      )}
+                      <Text size="xs" c={testResult.success ? 'teal' : 'red'}>
+                        {testResult.message}
+                      </Text>
+                    </Group>
+                  )}
+                </Group>
+              </Card>
             </div>
           )}
 
@@ -473,16 +610,28 @@ export const SettingsModal: React.FC = () => {
           )}
 
           {/* Modal Actions */}
-          <div className="modal-actions">
-            <button type="button" className="btn-secondary" onClick={() => setIsSettingsOpen(false)}>
+          <div
+            style={{
+              position: 'sticky',
+              bottom: 0,
+              background: 'var(--bg-card)',
+              padding: '1rem 0',
+              marginTop: '1.5rem',
+              borderTop: '1px solid var(--border-light)',
+              display: 'flex',
+              justifyContent: 'flex-end',
+              gap: '0.75rem',
+              zIndex: 10
+            }}
+          >
+            <Button variant="default" size="sm" onClick={() => setIsSettingsOpen(false)}>
               Cancel
-            </button>
-            <button type="submit" className="btn-primary">
+            </Button>
+            <Button type="submit" color="teal" size="sm">
               Save Settings
-            </button>
+            </Button>
           </div>
         </form>
-      </div>
-    </div>
+    </ResponsiveModal>
   );
 };

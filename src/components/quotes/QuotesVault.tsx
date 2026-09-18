@@ -14,15 +14,15 @@ import {
   Trash2,
   Tag,
   Maximize2,
-  Layers,
-  Grid,
   Shield,
   Wind,
   Compass,
   Feather,
   Quote as QuoteIcon,
-  Shuffle
+  Shuffle,
+  Camera
 } from 'lucide-react';
+import { SegmentedControl, TextInput, Badge, Button } from '@mantine/core';
 
 export type QuoteViewOption = 'zen' | 'manuscript' | 'shelves' | 'grid' | 'stream';
 
@@ -100,7 +100,19 @@ const ZenReaderDeck: React.FC<{ quotes: Quote[] }> = ({ quotes }) => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handlePrev, handleNext, handleCopy, currentQuote, togglePinQuote, setContemplatingQuote]);
 
-  if (!currentQuote || total === 0) return null;
+  if (!currentQuote || total === 0) {
+    return (
+      <div className="zen-reader-deck-container">
+        <div style={{ textAlign: 'center', padding: '3rem 1.5rem', background: 'var(--bg-card)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
+          <Sparkles size={32} color="var(--accent-gold)" style={{ margin: '0 auto 1rem' }} />
+          <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>No Quotes Found</h3>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+            Capture a quote or upload a screenshot to start your Zen Deck.
+          </p>
+        </div>
+      </div>
+    );
+  }
   const progressPercent = ((safeIndex + 1) / total) * 100;
 
   return (
@@ -491,7 +503,7 @@ const InfiniteWisdomStream: React.FC<{ quotes: Quote[] }> = ({ quotes }) => {
 // MAIN QUOTES VAULT WITH 5 UX READING OPTIONS SWITCHER
 // ==========================================================================
 export const QuotesVault: React.FC = () => {
-  const { quotes } = useData();
+  const { quotes, setIsScreenshotModalOpen } = useData();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTag, setSelectedTag] = useState('All');
   const [viewOption, setViewOption] = useState<QuoteViewOption>('zen');
@@ -535,88 +547,71 @@ export const QuotesVault: React.FC = () => {
       </div>
 
       {/* 5 UX READING OPTIONS SELECTOR */}
-      <div className="quote-ux-options-bar" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', padding: '0.85rem 1.15rem', backgroundColor: 'var(--bg-card)', border: 'var(--card-border)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--accent-gold)' }}>
-            Choose Reading Experience (5 UX Modes):
-          </span>
-        </div>
+      <div style={{ marginBottom: '1.25rem', width: '100%', overflowX: 'auto' }}>
+        <SegmentedControl
+          value={viewOption}
+          onChange={(val) => setViewOption(val as QuoteViewOption)}
+          fullWidth
+          size="xs"
+          radius="xl"
+          color="teal"
+          data={[
+            { label: 'Zen Deck', value: 'zen' },
+            { label: 'Manuscript', value: 'manuscript' },
+            { label: 'Shelves', value: 'shelves' },
+            { label: 'Focus Grid', value: 'grid' },
+            { label: 'Stream', value: 'stream' }
+          ]}
+        />
+      </div>
 
-        <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
-          <button
-            type="button"
-            className={`view-toggle-btn ${viewOption === 'zen' ? 'active' : ''}`}
-            onClick={() => setViewOption('zen')}
-          >
-            <Layers size={13} />
-            <span>1. Zen Deck (Carousel Focus)</span>
-          </button>
+      {/* Screenshot & Gallery Capture Trigger */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1rem' }}>
+        <Button
+          onClick={() => setIsScreenshotModalOpen(true)}
+          color="teal"
+          size="sm"
+          radius="md"
+          leftSection={<Camera size={16} />}
+        >
+          Capture from Screenshot / Gallery
+        </Button>
 
-          <button
-            type="button"
-            className={`view-toggle-btn ${viewOption === 'manuscript' ? 'active' : ''}`}
-            onClick={() => setViewOption('manuscript')}
-          >
-            <BookOpen size={13} />
-            <span>2. Literary Manuscript</span>
-          </button>
-
-          <button
-            type="button"
-            className={`view-toggle-btn ${viewOption === 'shelves' ? 'active' : ''}`}
-            onClick={() => setViewOption('shelves')}
-          >
-            <Compass size={13} />
-            <span>3. Theme Shelves</span>
-          </button>
-
-          <button
-            type="button"
-            className={`view-toggle-btn ${viewOption === 'grid' ? 'active' : ''}`}
-            onClick={() => setViewOption('grid')}
-          >
-            <Grid size={13} />
-            <span>4. Minimalist Focus Grid</span>
-          </button>
-
-          <button
-            type="button"
-            className={`view-toggle-btn ${viewOption === 'stream' ? 'active' : ''}`}
-            onClick={() => setViewOption('stream')}
-          >
-            <Wind size={13} />
-            <span>5. Infinite Stream</span>
-          </button>
-        </div>
+        <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
+          Tip: You can also paste an image anywhere with Ctrl+V
+        </span>
       </div>
 
       {/* Fast 4-Field Capture Bar */}
-      <FastQuoteCapture />
+      <div style={{ marginBottom: '1.25rem' }}>
+        <FastQuoteCapture />
+      </div>
 
       {/* Search & Tags Bar */}
-      <div className="vault-controls-row">
-        <div className="vault-search-box">
-          <Search size={15} className="search-icon" />
-          <input
-            type="text"
-            className="vault-search-input"
-            placeholder="Search quotes, authors, or personal notes..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', marginBottom: '1.5rem' }}>
+        <TextInput
+          leftSection={<Search size={15} color="var(--text-muted)" />}
+          placeholder="Search quotes, authors, or personal notes..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          size="sm"
+          radius="md"
+        />
 
         {allTags.length > 1 && (
-          <div className="vault-tags-scroll-wrap">
+          <div style={{ display: 'flex', gap: '0.4rem', overflowX: 'auto', paddingBottom: '0.25rem' }} className="hide-scrollbar">
             {allTags.map((tag) => (
-              <button
+              <Badge
                 key={tag}
-                type="button"
-                className={`tag-pill-filter ${selectedTag === tag ? 'active' : ''}`}
+                variant={selectedTag === tag ? 'filled' : 'outline'}
+                color="teal"
+                size="sm"
+                radius="xl"
+                style={{ cursor: 'pointer', textTransform: 'none' }}
                 onClick={() => setSelectedTag(tag)}
               >
                 {tag}
-              </button>
+              </Badge>
             ))}
           </div>
         )}

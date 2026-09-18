@@ -1,6 +1,7 @@
 import React from 'react';
 import { useData } from '../../context/DataContext';
-import { X, Copy, Check, Bookmark } from 'lucide-react';
+import { Copy, Check, Bookmark } from 'lucide-react';
+import { ResponsiveModal } from './ResponsiveModal';
 
 export const ContemplateModal: React.FC = () => {
   const { contemplatingQuote, setContemplatingQuote, togglePinQuote, showToast } = useData();
@@ -16,33 +17,13 @@ export const ContemplateModal: React.FC = () => {
   };
 
   return (
-    <div className="modal-overlay" onClick={() => setContemplatingQuote(null)}>
-      <div
-        className="modal-card contemplate-modal"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button
-          className="modal-close-btn"
-          style={{ position: 'absolute', top: '1.5rem', right: '1.5rem' }}
-          onClick={() => setContemplatingQuote(null)}
-        >
-          <X size={18} />
-        </button>
-
-        <div style={{ marginBottom: '1.5rem' }}>
-          <span
-            style={{
-              fontSize: '0.75rem',
-              textTransform: 'uppercase',
-              letterSpacing: '0.1em',
-              color: 'var(--accent-gold)',
-              fontWeight: 600
-            }}
-          >
-            Contemplation Space
-          </span>
-        </div>
-
+    <ResponsiveModal
+      isOpen={!!contemplatingQuote}
+      onClose={() => setContemplatingQuote(null)}
+      title="Contemplation Space"
+      maxWidth="560px"
+    >
+      <div style={{ textAlign: 'center', padding: '1rem 0' }}>
         <blockquote className="contemplate-text">
           "{contemplatingQuote.text}"
         </blockquote>
@@ -92,6 +73,6 @@ export const ContemplateModal: React.FC = () => {
           </button>
         </div>
       </div>
-    </div>
+    </ResponsiveModal>
   );
 };

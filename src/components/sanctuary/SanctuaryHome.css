@@ -3,6 +3,9 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .sanctuary-ambient-glow {
@@ -10,11 +13,13 @@
   top: -100px;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
+  width: min(600px, 100vw);
+  max-width: 100vw;
   height: 400px;
   background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
   z-index: -1;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .sanctuary-hero-banner {

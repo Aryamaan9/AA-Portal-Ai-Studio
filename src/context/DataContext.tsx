@@ -29,6 +29,10 @@ interface DataContextType {
   setIsSettingsOpen: (open: boolean) => void;
   isWhatsAppSimOpen: boolean;
   setIsWhatsAppSimOpen: (open: boolean) => void;
+  isScreenshotModalOpen: boolean;
+  setIsScreenshotModalOpen: (open: boolean) => void;
+  pastedImageBase64: string | null;
+  setPastedImageBase64: (data: string | null) => void;
   contemplatingQuote: Quote | null;
   setContemplatingQuote: (quote: Quote | null) => void;
   toastMessage: string | null;
@@ -71,6 +75,8 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isBreathModalOpen, setIsBreathModalOpen] = useState<boolean>(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
   const [isWhatsAppSimOpen, setIsWhatsAppSimOpen] = useState<boolean>(false);
+  const [isScreenshotModalOpen, setIsScreenshotModalOpen] = useState<boolean>(false);
+  const [pastedImageBase64, setPastedImageBase64] = useState<string | null>(null);
   const [contemplatingQuote, setContemplatingQuote] = useState<Quote | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isCompanionTyping, setIsCompanionTyping] = useState<boolean>(false);
@@ -376,7 +382,8 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
         quotes, diary, companionChat, chatThreads, activeThreadId, settings,
         activeTab, setActiveTab, isCompanionDrawerOpen, setIsCompanionDrawerOpen,
         isBreathModalOpen, setIsBreathModalOpen, isSettingsOpen, setIsSettingsOpen,
-        isWhatsAppSimOpen, setIsWhatsAppSimOpen, contemplatingQuote, setContemplatingQuote,
+        isWhatsAppSimOpen, setIsWhatsAppSimOpen, isScreenshotModalOpen, setIsScreenshotModalOpen,
+        pastedImageBase64, setPastedImageBase64, contemplatingQuote, setContemplatingQuote,
         toastMessage, showToast, isCompanionTyping,
         addQuote, updateQuote, deleteQuote, togglePinQuote,
         addDiaryEntry, updateDiaryEntry, deleteDiaryEntry,
